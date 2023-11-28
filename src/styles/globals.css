@@ -3,3 +3,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/** Texture Register */
+
+.screen {
+  background-image: url("/texture-register.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
