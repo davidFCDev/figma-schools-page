@@ -8,6 +8,7 @@ const config: Config = {
         orange: "#EB763C",
         orangeLight: "#FF993A",
         greenLime: "#8AC53E",
+        greenPalid: "#D5E3E0",
         green: "#006B61",
         darkGreen: "#026451",
         yellow: "#FFC102",

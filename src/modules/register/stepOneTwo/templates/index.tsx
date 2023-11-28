@@ -1,5 +1,53 @@
+"use client";
+import { BsArrowLeft } from "react-icons/bs";
+import ProgressBar from "@/modules/common/components/progress-bar";
+import Title from "../components/title";
+import { style } from "@/style";
+import FormStepOneTwo from "../components/form";
+
+/* eslint-disable @next/next/no-img-element */
 const StepOneTwoTemplate = () => {
-  return <div>StepOneTwoTemplate</div>;
+  return (
+    <div className="w-full font-outfit flex flex-col small:flex-row">
+      <div className="flex flex-col gap-24 screen relative text-white bg-green min-h-screen p-12 overflow-hidden shadow shadow-green">
+        <img src="/logo-edufy.png" alt="logo" className="w-52" />
+        <img
+          src="/points.png"
+          alt="points"
+          className="absolute -top-12 -right-10"
+        />
+        <img
+          src="/small-points.png"
+          alt="small-points"
+          className="absolute -bottom-10 -left-10 w-72"
+        />
+
+        <Title />
+      </div>
+
+      <div className="p-12 w-full flex flex-col gap-10 items-center">
+        <div className="flex flex-col gap-5 w-full">
+          <div className="flex justify-between px-2">
+            <h3 className="font-semibold text-2xl">Account set up</h3>
+            <p className="font-semibold text-2xl">1/3</p>
+          </div>
+          <ProgressBar progress={33} />
+          <div className="text-2xl px-2">
+            <BsArrowLeft />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-5 max-w-xl items-start">
+          <h2 className={`${style.title}`}>Who Are You Planning for?</h2>
+          <p className={`${style.subtitle}`}>
+            Add your students’ graduation years to receive personalized
+            educational insights tailored for your exact situation.
+          </p>
+          <FormStepOneTwo />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default StepOneTwoTemplate;

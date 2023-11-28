@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
-const FormStepOne = () => {
+const FormStepOneTwo = () => {
   const router = useRouter();
   const [selectedOption, setSelectedOption] = useState("");
 
@@ -13,7 +13,7 @@ const FormStepOne = () => {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     console.log("selectedOption", selectedOption);
-    router.push('/step-one-two');
+    router.push("/step-one-two");
   };
 
   return (
@@ -97,4 +97,4 @@ const FormStepOne = () => {
   );
 };
 
-export default FormStepOne;
+export default FormStepOneTwo;

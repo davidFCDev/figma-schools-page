@@ -1,19 +1,14 @@
+"use client";
 import { BsArrowLeft } from "react-icons/bs";
 import ProgressBar from "@/modules/common/components/progress-bar";
 import Title from "../components/title";
 import { style } from "@/style";
-import { useState } from "react";
+import FormStepOne from "../components/form";
 
 /* eslint-disable @next/next/no-img-element */
 const StepOneTemplate = () => {
-  const [selectedOption, setSelectedOption] = useState("");
-
-  const handleOptionChange = (e: any) => {
-    setSelectedOption(e.target.value);
-  };
-
   return (
-    <div className="w-full font-outfit flex">
+    <div className="w-full font-outfit flex flex-col small:flex-row">
       <div className="flex flex-col gap-24 screen relative text-white bg-green min-h-screen p-12 overflow-hidden shadow shadow-green">
         <img src="/logo-edufy.png" alt="logo" className="w-52" />
         <img
@@ -42,7 +37,7 @@ const StepOneTemplate = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-5 max-w-xl items-center">
+        <div className="flex flex-col gap-5 max-w-xl items-start">
           <h2 className={`${style.title}`}>
             What is the primary purpose of using Edufy?
           </h2>
@@ -50,37 +45,7 @@ const StepOneTemplate = () => {
             We’ll get you started with personalized recommendations based on
             your focus.
           </p>
-          <form>
-            <label>
-              <input
-                type="radio"
-                value="option1"
-                checked={selectedOption === "option1"}
-                onChange={handleOptionChange}
-              />
-              Option 1
-            </label>
-
-            <label>
-              <input
-                type="radio"
-                value="option2"
-                checked={selectedOption === "option2"}
-                onChange={handleOptionChange}
-              />
-              Option 2
-            </label>
-
-            <label>
-              <input
-                type="radio"
-                value="option3"
-                checked={selectedOption === "option3"}
-                onChange={handleOptionChange}
-              />
-              Option 3
-            </label>
-          </form>
+          <FormStepOne />
         </div>
       </div>
     </div>
