@@ -6,6 +6,6 @@ export const metadata: Metadata = {
   description: "Learn about test guides for scholarships",
 };
 
-export default function Cart() {
+export default function Guides() {
   return <GuidesTemplate />;
 }

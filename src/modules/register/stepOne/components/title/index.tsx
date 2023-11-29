@@ -13,7 +13,7 @@ const Title = () => {
           We won’t spam your email, we’ll only use it for whats necessary.
         </p>
       </div>
-      <img src="/star.png" alt="star" className="w-80" />
+      <img src="/star.png" alt="star" className="w-72" />
     </div>
   );
 };

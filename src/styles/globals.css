@@ -14,3 +14,10 @@
   background-position: center;
 }
 
+.mask {
+  background-image: url("/mask-green.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+

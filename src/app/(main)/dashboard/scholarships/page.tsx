@@ -6,6 +6,6 @@ export const metadata: Metadata = {
   description: "Find Scholarships across Western Australia",
 };
 
-export default function Cart() {
+export default function Scholarships() {
   return <ScholarshipsTemplate />;
 }

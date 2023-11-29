@@ -6,6 +6,6 @@ export const metadata: Metadata = {
   description: "Popular resources",
 };
 
-export default function Cart() {
+export default function Resources() {
   return <ResourcesTemplate />;
 }

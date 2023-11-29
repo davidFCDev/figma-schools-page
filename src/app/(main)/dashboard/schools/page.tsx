@@ -6,6 +6,6 @@ export const metadata: Metadata = {
   description: "Search all the schools in Western Australia",
 };
 
-export default function Cart() {
+export default function Schools() {
   return <SchoolsTemplate />;
 }

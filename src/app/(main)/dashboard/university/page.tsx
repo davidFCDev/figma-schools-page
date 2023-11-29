@@ -6,6 +6,6 @@ export const metadata: Metadata = {
   description: "University Scholarships and Rankings",
 };
 
-export default function Cart() {
+export default function University() {
   return <UniversitiesTemplate />;
 }

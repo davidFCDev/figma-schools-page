@@ -6,6 +6,6 @@ export const metadata: Metadata = {
   description: "Universities, TAFEs and Apprenticeships",
 }
 
-export default function Cart() {
+export default function Pathways() {
   return <PathwaysTemplate />
 }

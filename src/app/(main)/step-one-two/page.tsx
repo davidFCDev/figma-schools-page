@@ -6,6 +6,6 @@ export const metadata: Metadata = {
   description: "Login step one, second option.",
 };
 
-export default function Login() {
+export default function StepOneTwo() {
   return <StepOneTwoTemplate />;
 }

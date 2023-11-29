@@ -4,6 +4,7 @@ import ProgressBar from "@/modules/common/components/progress-bar";
 import Title from "../components/title";
 import { style } from "@/style";
 import FormStepOneTwo from "../components/form";
+import Link from "next/link";
 
 /* eslint-disable @next/next/no-img-element */
 const StepOneTwoTemplate = () => {
@@ -25,19 +26,19 @@ const StepOneTwoTemplate = () => {
         <Title />
       </div>
 
-      <div className="p-12 w-full flex flex-col gap-10 items-center">
+      <div className="p-12 w-full flex flex-col gap-10 items-center bg-gray">
         <div className="flex flex-col gap-5 w-full">
           <div className="flex justify-between px-2">
             <h3 className="font-semibold text-2xl">Account set up</h3>
             <p className="font-semibold text-2xl">1/3</p>
           </div>
           <ProgressBar progress={33} />
-          <div className="text-2xl px-2">
+          <Link href={"/"} className="text-2xl px-2">
             <BsArrowLeft />
-          </div>
+          </Link>
         </div>
 
-        <div className="flex flex-col gap-5 max-w-xl items-start">
+        <div className="flex flex-col gap-5 w-4/6 items-start">
           <h2 className={`${style.title}`}>Who Are You Planning for?</h2>
           <p className={`${style.subtitle}`}>
             Add your students’ graduation years to receive personalized

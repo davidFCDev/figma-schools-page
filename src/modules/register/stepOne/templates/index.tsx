@@ -25,7 +25,7 @@ const StepOneTemplate = () => {
         <Title />
       </div>
 
-      <div className="p-12 w-full flex flex-col gap-10 items-center">
+      <div className="p-12 w-full flex flex-col gap-10 items-center bg-gray">
         <div className="flex flex-col gap-5 w-full">
           <div className="flex justify-between px-2">
             <h3 className="font-semibold text-2xl">Account set up</h3>
@@ -37,7 +37,7 @@ const StepOneTemplate = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-5 max-w-xl items-start">
+        <div className="flex flex-col gap-5 w-4/6 items-start">
           <h2 className={`${style.title}`}>
             What is the primary purpose of using Edufy?
           </h2>

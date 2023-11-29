@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const FormStepOne = () => {
+  const [error, setError] = useState<string | null>(null);
   const router = useRouter();
   const [selectedOption, setSelectedOption] = useState("");
 
@@ -12,8 +13,14 @@ const FormStepOne = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log("selectedOption", selectedOption);
-    router.push('/step-one-two');
+
+    if (!selectedOption) {
+      setError("Please, select one option first.");
+      return;
+    }
+
+    // TODO: Send the value to the next route
+    router.push("/step-one-two");
   };
 
   return (
@@ -86,13 +93,16 @@ const FormStepOne = () => {
         Other
       </label>
 
-      <button
-        type="submit"
-        onClick={handleSubmit}
-        className="bg-green text-white px-12 py-3 rounded-full font-semibold mt-4"
-      >
-        Next
-      </button>
+      <div className="flex items-baseline gap-5">
+        <button
+          type="submit"
+          onClick={handleSubmit}
+          className="bg-green text-white px-12 py-3 rounded-full font-semibold mt-4 hover:bg-green2"
+        >
+          Next
+        </button>
+        {error && <p className="text-red-500">{error}</p>}
+      </div>
     </form>
   );
 };

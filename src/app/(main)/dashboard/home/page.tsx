@@ -7,6 +7,6 @@ export const metadata: Metadata = {
   description: "Welcome to Edufy",
 }
 
-export default function Cart() {
+export default function Home() {
   return <HomeTemplate />
 }

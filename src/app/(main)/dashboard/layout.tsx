@@ -6,9 +6,9 @@ export default function PageLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <div className="flex w-full bg-gray">
       <Nav />
-      {children}
-    </>
+      <div className="w-full">{children}</div>
+    </div>
   );
 }

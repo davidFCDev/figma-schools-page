@@ -5,17 +5,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        orange: "#EB763C",
+        orange: "#FF993A",
         orangeLight: "#FF993A",
         greenLime: "#8AC53E",
         greenPalid: "#D5E3E0",
+        green2: "#12AA5B",
         green: "#006B61",
         darkGreen: "#026451",
         yellow: "#FFC102",
         amber: "#FFD143",
-        blue: "#006ED3",
+        blue: "#369FFF",
         violet: "#C099FC",
         pink: "#FC99D0",
+        gray: "#F8F8F8",
       },
       transitionProperty: {
         width: "width",

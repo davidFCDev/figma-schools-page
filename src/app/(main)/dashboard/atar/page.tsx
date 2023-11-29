@@ -6,6 +6,6 @@ export const metadata: Metadata = {
   description: "Estimate your ATAR score",
 };
 
-export default function Cart() {
+export default function Atar() {
   return <AtarTemplate />;
 }

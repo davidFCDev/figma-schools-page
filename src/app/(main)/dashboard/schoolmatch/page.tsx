@@ -6,6 +6,6 @@ export const metadata: Metadata = {
   description: "Look for your ideal school",
 };
 
-export default function Cart() {
+export default function Schoolmatch() {
   return <SchoolmatchTemplate />;
 }
