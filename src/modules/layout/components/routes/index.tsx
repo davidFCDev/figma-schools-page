@@ -16,13 +16,13 @@ const Routes = () => {
           key={index}
           className={`flex items-center gap-4 font-semibold ${
             currentPath === route.path
-              ? "bg-orange text-white"
+              ? "bg-darkOrange text-white"
               : "bg-white text-green"
           } px-2 py-2 rounded-full w-full`}
         >
           <span
             className={`text-2xl rounded-full p-2 ${
-              currentPath === route.path ? "bg-white text-orange" : ""
+              currentPath === route.path ? "bg-white text-darkOrange" : ""
             }`}
           >
             {route.icon}

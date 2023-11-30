@@ -21,3 +21,8 @@
   background-position: center;
 }
 
+/** Arrow select */
+
+#sort {
+  appearance: none; 
+}

@@ -4,7 +4,7 @@ import { RiRouteFill } from "react-icons/ri";
 import { FaUserGraduate } from "react-icons/fa";
 import { TbCalculatorFilled } from "react-icons/tb";
 import { HiLightningBolt } from "react-icons/hi";
-import { PathwayProps, Route } from "@/types";
+import { PathwayProps, Route, ScholarshipProps } from "@/types";
 
 export const ROUTES: Route[] = [
   {
@@ -91,5 +91,41 @@ export const PATHWAYS: PathwayProps[] = [
       "We would list your resources or affiliate programs, something that provides prep for this particular test ",
       "We would list your resources or affiliate programs, something that provides prep for this particular test ",
     ],
+  },
+];
+
+export const SCHOLARSHIPS: ScholarshipProps[] = [
+  {
+    id: 1,
+    name: "Perth Modern School",
+    price: 20000,
+    date: "Nov 20, 2023",
+    logo: "/logos/school1.png",
+    elegibility: ["year 11 and 12 students", "Minimum GPA of 3.5"],
+    application: ["Online", "In Person"],
+    tests: ["ACER Scholarship Test"],
+    coverage: ["Boarding", "Books", "Tuition"],
+  },
+  {
+    id: 2,
+    name: "St Hilda's Anglican School for Girls",
+    price: 20000,
+    date: "Aug 20, 2023",
+    logo: "/logos/school2.png",
+    elegibility: ["year 11 and 12 students", "Minimum GPA of 3.5"],
+    application: ["Online", "In Person"],
+    tests: ["ACER Scholarship Test"],
+    coverage: ["Boarding", "Books", "Tuition"],
+  },
+  {
+    id: 3,
+    name: "Christ Church Grammar School",
+    price: 20000,
+    date: "Sept 20, 2023",
+    logo: "/logos/school1.png",
+    elegibility: ["year 11 and 12 students", "Minimum GPA of 3.5"],
+    application: ["Online", "In Person"],
+    tests: ["ACER Scholarship Test"],
+    coverage: ["Boarding", "Books", "Tuition"],
   },
 ];

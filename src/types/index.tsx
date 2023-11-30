@@ -24,3 +24,15 @@ export interface PathwayProps {
   description: string;
   features: string[];
 }
+
+export interface ScholarshipProps {
+  id: number;
+  name: string;
+  price: number;
+  date: string;
+  logo: string;
+  elegibility: string[];
+  application: string[];
+  tests: string[];
+  coverage: string[];
+}

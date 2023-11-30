@@ -7,6 +7,7 @@ const config: Config = {
       colors: {
         orange: "#FF993A",
         orangeLight: "#FF993A",
+        darkOrange: "#E5743D",
         greenLime: "#8AC53E",
         greenPalid: "#D5E3E0",
         green2: "#12AA5B",
@@ -15,7 +16,7 @@ const config: Config = {
         yellow: "#FFC102",
         amber: "#FFD143",
         blue: "#369FFF",
-        violet: "#C099FC",
+        violet: "#C099FC",  
         pink: "#FC99D0",
         gray: "#F8F8F8",
       },
