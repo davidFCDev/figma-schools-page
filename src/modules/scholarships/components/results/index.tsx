@@ -24,12 +24,10 @@ const Results: React.FC<ResultsProps> = () => {
           key={scholarship.id}
           className="bg-gray border border-neutral-200 rounded-3xl px-4 py-6 flex flex-col gap-8"
         >
-          <div
-            onClick={() => handleScholarshipClick(scholarship.id)}
-            className="hover:cursor-pointer"
-          >
-            <Scholarship scholarship={scholarship} />
-          </div>
+          <Scholarship
+            scholarship={scholarship}
+            onSelect={handleScholarshipClick}
+          />
 
           {selectedScholarship === scholarship.id && (
             <DropDown scholarship={scholarship} />

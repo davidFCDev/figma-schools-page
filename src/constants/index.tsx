@@ -97,6 +97,7 @@ export const PATHWAYS: PathwayProps[] = [
 export const SCHOLARSHIPS: ScholarshipProps[] = [
   {
     id: 1,
+    status: true,
     name: "Perth Modern School",
     price: 20000,
     date: "Nov 20, 2023",
@@ -108,6 +109,7 @@ export const SCHOLARSHIPS: ScholarshipProps[] = [
   },
   {
     id: 2,
+    status: true,
     name: "St Hilda's Anglican School for Girls",
     price: 20000,
     date: "Aug 20, 2023",
@@ -119,10 +121,11 @@ export const SCHOLARSHIPS: ScholarshipProps[] = [
   },
   {
     id: 3,
+    status: false,
     name: "Christ Church Grammar School",
     price: 20000,
     date: "Sept 20, 2023",
-    logo: "/logos/school1.png",
+    logo: "/logos/school3.png",
     elegibility: ["Year 11 and 12 students", "Minimum GPA of 3.5"],
     application: ["Online", "In Person"],
     tests: ["ACER Scholarship Test"],

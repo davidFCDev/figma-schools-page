@@ -27,6 +27,7 @@ export interface PathwayProps {
 
 export interface ScholarshipProps {
   id: number;
+  status: boolean
   name: string;
   price: number;
   date: string;
