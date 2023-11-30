@@ -31,8 +31,8 @@ export default function BasicSelect() {
             '& .MuiOutlinedInput-notchedOutline': {
               border: 'none',
             },
-            
           }}
+          
         >
           <MenuItem hidden value="">Filter</MenuItem>
           <MenuItem value={10}>None</MenuItem>

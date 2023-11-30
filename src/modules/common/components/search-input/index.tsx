@@ -24,9 +24,15 @@ export default function SearchInput() {
           <div
             style={{
               ...style,
+              boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.05)",
+              top: -13,
+              width: "100%",
+              position: "absolute",
+              borderTop: 1,
               borderBottomRightRadius: 15,
               borderBottomLeftRadius: 15,
               backgroundColor: "white",
+              zIndex: 10,
             }}
             {...other}
           >
@@ -36,7 +42,6 @@ export default function SearchInput() {
         onClose={() => setIsFocused(false)}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
-        open={isFocused}
         renderOption={(props, option) => (
           <li
             {...props}
@@ -74,10 +79,10 @@ export default function SearchInput() {
               ),
             }}
             sx={{
+              position: "relative",
               borderRadius: isFocused ? "15px 15px 0 0" : "15px",
               backgroundColor: "white",
               boxShadow: "0px 2px 2px rgba(0, 0, 0, 0.05)",
-              border: "none",
               color: "#4F4F4F",
               "& .MuiOutlinedInput-notchedOutline": {
                 border: "none",

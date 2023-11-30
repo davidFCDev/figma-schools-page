@@ -8,7 +8,6 @@ import Results from "../components/results";
 import SearchInput from "@/modules/common/components/search-input";
 
 const ScholarshipsTemplate = () => {
-
   return (
     <main className={`${style.page} flex flex-col gap-8`}>
       <div className="bg-darkOrange text-white w-full flex flex-col p-14 items-center rounded-3xl relative z-0 ">
