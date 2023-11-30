@@ -60,7 +60,7 @@ const StepThreeTemplate = () => {
             onClick={handleSubmit}
             className="bg-green text-white px-12 py-3 rounded-full font-semibold mt-4 hover:bg-green2"
           >
-            Next
+            Finish
           </button>
         </div>
       </div>

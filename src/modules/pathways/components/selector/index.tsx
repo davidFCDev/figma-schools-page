@@ -1,15 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
-/* eslint-disable @next/next/no-img-element */
 import { PATHWAYS } from "@/constants";
 import { useContext, FC } from "react";
-import { PathwayContext, PathwayContextProps } from "@/lib/context/pathway-context";
+import {
+  PathwayContext,
+  PathwayContextProps,
+} from "@/lib/context/pathway-context";
 
 interface SelectorProps {
   // If props are needed, define them here
 }
 
 const Selector: FC<SelectorProps> = () => {
-  // Use the useContext hook to access the context
+
   const contextValue = useContext(PathwayContext) as PathwayContextProps;
 
   const { selectedPathway, handlePathwayClick } = contextValue;
@@ -19,11 +21,12 @@ const Selector: FC<SelectorProps> = () => {
       {PATHWAYS.map((pathway) => (
         <div
           key={pathway.id}
-          className={`${
-            selectedPathway?.id === pathway.id
-              ? `border border-${pathway.color} text-${pathway.color}`
-              : "border border-white"
-          } p-5 flex items-center bg-white rounded-2xl shadow-md shadow-neutral-200 gap-4 hover:cursor-pointer`}
+          className="border border-white p-5 flex items-center bg-white rounded-2xl shadow-md shadow-neutral-200 gap-4 hover:cursor-pointer"
+          style={{
+            borderColor:
+              selectedPathway?.id === pathway.id ? pathway.color : "",
+            color: selectedPathway?.id === pathway.id ? pathway.color : "",
+          }}
           onClick={() => handlePathwayClick(pathway)}
         >
           <img src={pathway.icon} alt={pathway.title} />
@@ -35,4 +38,3 @@ const Selector: FC<SelectorProps> = () => {
 };
 
 export default Selector;
-

@@ -52,7 +52,7 @@ export const ROUTES: Route[] = [
 export const PATHWAYS: PathwayProps[] = [
   {
     id: 1,
-    color: "greenLime",
+    color: "#8AC53E",
     icon: "/icons/green-search.png",
     title: "Universities",
     subtitle: "About the University",
@@ -66,7 +66,7 @@ export const PATHWAYS: PathwayProps[] = [
   },
   {
     id: 2,
-    color: "violet",
+    color: "#C099FC",
     icon: "/icons/violet-check.png",
     title: "TAFEs",
     subtitle: "About the TAFE",
@@ -80,7 +80,7 @@ export const PATHWAYS: PathwayProps[] = [
   },
   {
     id: 3,
-    color: "blue",
+    color: "#369FFF",
     icon: "/icons/blue-books.png",
     title: "Apprenticeships",
     subtitle: "About the Apprenticeships",
