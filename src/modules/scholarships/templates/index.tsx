@@ -4,12 +4,7 @@ import { style } from "@/style";
 import { useState } from "react";
 import { RiSearchLine } from "react-icons/ri";
 import BasicSelect from "../components/select";
-import { SCHOLARSHIPS } from "@/constants";
-import { PiTrophy } from "react-icons/pi";
-import { LuClock3 } from "react-icons/lu";
-import SpecialButton from "@/modules/common/components/special-button";
-import { IoHandLeftOutline } from "react-icons/io5";
-import { SlArrowDown } from "react-icons/sl";
+import Results from "../components/results";
 
 const ScholarshipsTemplate = () => {
   const [toggleList, setToggleList] = useState(false);
@@ -64,48 +59,14 @@ const ScholarshipsTemplate = () => {
       </div>
 
       <div className="flex w-full justify-between items-center px-8 font-nunito">
-        <h2 className="text-3xl font-semibold">Scholarship results</h2>
+        <h2 className="text-3xl font-bold">Scholarship results</h2>
         <div className="flex gap-2">
           <BasicSelect />
           <BasicSelect />
         </div>
       </div>
 
-      <div className="w-full flex flex-col gap-2 justify-center p-3 bg-white rounded-3xl font-averia text-lg font-semibold ">
-        {SCHOLARSHIPS.map((scholarship) => (
-          <div key={scholarship.id} className="bg-gray rounded-3xl px-4 py-6">
-            <div className="flex justify-between items-center">
-              <div className="flex gap-4 items-center">
-                <span>{scholarship.id}</span>
-                <img src={scholarship.logo} alt={scholarship.name} />
-                <h3 className="max-w-[250px]">{scholarship.name}</h3>
-              </div>
-
-              <div className="flex gap-5 items-center">
-                <div className="flex gap-3 items-center p-4 bg-white rounded-3xl border border-neutral-200">
-                  <div className="text-2xl">
-                    <PiTrophy />
-                  </div>
-                  <span>${scholarship.price}</span>
-                </div>
-
-                <div className="flex gap-3 items-center p-4 bg-white rounded-3xl">
-                  <div className="text-2xl">
-                    <LuClock3 />
-                  </div>
-                  <span>{scholarship.date}</span>
-                </div>
-
-                <SpecialButton text="Apply" />
-
-                <div>
-                  <SlArrowDown />
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+      <Results />
     </main>
   );
 };
