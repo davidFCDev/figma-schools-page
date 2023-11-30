@@ -6,7 +6,7 @@ import Routes from "../../components/routes";
 const Nav = () => {
 
   return (
-    <aside className="px-12 py-10 w-1/4 flex flex-col gap-20 rounded-r-[60px] bg-white font-nunito">
+    <aside className="px-12 py-10 w-1/4 flex flex-col gap-20 rounded-r-[60px] bg-white font-nunito shadow-md shadow-neutral-200">
       <img src="/logo-edufy2.png" alt="logo" className="w-40" />
 
       <div className="flex flex-col gap-10">

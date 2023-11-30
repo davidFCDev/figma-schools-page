@@ -58,6 +58,11 @@ export const PATHWAYS: PathwayProps[] = [
     subtitle: "About the University",
     description:
       "The Australian Council for Educational Research (ACER) is an independent organization that conducts research and develops assessments, including scholarship and entrance tests, primarily for Australian educational institutions.",
+    features: [
+      "We would list your resources or affiliate programs, something that provides prep for this particular test ",
+      "We would list your resources or affiliate programs, something that provides prep for this particular test ",
+      "We would list your resources or affiliate programs, something that provides prep for this particular test ",
+    ],
   },
   {
     id: 2,
@@ -67,6 +72,11 @@ export const PATHWAYS: PathwayProps[] = [
     subtitle: "About the TAFE",
     description:
       "The Australian Council for Educational Research (ACER) is an independent organization that conducts research and develops assessments, including scholarship and entrance tests, primarily for Australian educational institutions.",
+    features: [
+      "We would list your resources or affiliate programs, something that provides prep for this particular test ",
+      "We would list your resources or affiliate programs, something that provides prep for this particular test ",
+      "We would list your resources or affiliate programs, something that provides prep for this particular test ",
+    ],
   },
   {
     id: 3,
@@ -76,5 +86,10 @@ export const PATHWAYS: PathwayProps[] = [
     subtitle: "About the Apprenticeships",
     description:
       "The Australian Council for Educational Research (ACER) is an independent organization that conducts research and develops assessments, including scholarship and entrance tests, primarily for Australian educational institutions.",
+    features: [
+      "We would list your resources or affiliate programs, something that provides prep for this particular test ",
+      "We would list your resources or affiliate programs, something that provides prep for this particular test ",
+      "We would list your resources or affiliate programs, something that provides prep for this particular test ",
+    ],
   },
 ];

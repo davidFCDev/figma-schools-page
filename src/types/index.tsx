@@ -22,4 +22,5 @@ export interface PathwayProps {
   title: string;
   subtitle: string;
   description: string;
+  features: string[];
 }
