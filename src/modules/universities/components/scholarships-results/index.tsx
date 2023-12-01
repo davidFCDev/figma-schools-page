@@ -1,14 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
-import { SCHOLARSHIPS } from "@/constants";
-import Scholarship from "./scholarship";
-import DropDown from "./dropdown";
+import { UNIVERSITY_SCHOLARSHIPS } from "@/constants";
 import { useState } from "react";
+import TitleDropdown from "./title-dropdown";
+import TitleResults from "./title-results";
 
 interface ResultsProps {}
 
-const Results: React.FC<ResultsProps> = () => {
+const UniversityResults: React.FC<ResultsProps> = () => {
   const [selectedScholarship, setSelectedScholarship] = useState<number | null>(
-    SCHOLARSHIPS.length > 0 ? SCHOLARSHIPS[0].id : null
+    UNIVERSITY_SCHOLARSHIPS.length > 0 ? UNIVERSITY_SCHOLARSHIPS[0].id : null
   );
 
   const handleScholarshipClick = (scholarshipId: number) => {
@@ -19,19 +19,19 @@ const Results: React.FC<ResultsProps> = () => {
 
   return (
     <div className="w-full flex flex-col gap-10 justify-center p-3 bg-white rounded-3xl font-averia text-lg font-semibold ">
-      {SCHOLARSHIPS.map((scholarship) => (
+      {UNIVERSITY_SCHOLARSHIPS.map((scholarship) => (
         <div
           key={scholarship.id}
           className="bg-gray border border-neutral-200 rounded-3xl px-4 py-6 flex flex-col gap-8"
         >
-          <Scholarship
+          <TitleResults
             selectedScholarship={selectedScholarship}
             scholarship={scholarship}
             onSelect={handleScholarshipClick}
           />
 
           {selectedScholarship === scholarship.id && (
-            <DropDown scholarship={scholarship} />
+            <TitleDropdown scholarship={scholarship} />
           )}
         </div>
       ))}
@@ -39,4 +39,4 @@ const Results: React.FC<ResultsProps> = () => {
   );
 };
 
-export default Results;
+export default UniversityResults;

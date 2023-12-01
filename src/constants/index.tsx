@@ -4,7 +4,12 @@ import { RiRouteFill } from "react-icons/ri";
 import { FaUserGraduate } from "react-icons/fa";
 import { TbCalculatorFilled } from "react-icons/tb";
 import { HiLightningBolt } from "react-icons/hi";
-import { PathwayProps, Route, ScholarshipProps } from "@/types";
+import {
+  PathwayProps,
+  Route,
+  ScholarshipProps,
+  UniversityScholarshipProps,
+} from "@/types";
 
 export const ROUTES: Route[] = [
   {
@@ -113,7 +118,7 @@ export const SCHOLARSHIPS: ScholarshipProps[] = [
     name: "St Hilda's Anglican School for Girls",
     price: 20000,
     date: "Aug 20, 2023",
-    logo: "/logos/school2.png",
+    logo: "/logos/mu-logo.png",
     elegibility: ["Year 11 and 12 students", "Minimum GPA of 3.5"],
     application: ["Online", "In Person"],
     tests: ["ACER Scholarship Test"],
@@ -126,6 +131,42 @@ export const SCHOLARSHIPS: ScholarshipProps[] = [
     price: 20000,
     date: "Sept 20, 2023",
     logo: "/logos/school3.png",
+    elegibility: ["Year 11 and 12 students", "Minimum GPA of 3.5"],
+    application: ["Online", "In Person"],
+    tests: ["ACER Scholarship Test"],
+    coverage: ["Boarding", "Books", "Tuition"],
+  },
+];
+
+export const UNIVERSITY_SCHOLARSHIPS: UniversityScholarshipProps[] = [
+  {
+    id: 1,
+    name: "Scholarship Title",
+    opens: "Nov 20, 2023",
+    closes: "Nov 20, 2023",
+    logo: "/logos/mu-logo.png",
+    elegibility: ["Year 11 and 12 students", "Minimum GPA of 3.5"],
+    application: ["Online", "In Person"],
+    tests: ["ACER Scholarship Test"],
+    coverage: ["Boarding", "Books", "Tuition"],
+  },
+  {
+    id: 2,
+    name: "Scholarship Title",
+    opens: "Nov 20, 2023",
+    closes: "Nov 20, 2023",
+    logo: "/logos/mu-logo.png",
+    elegibility: ["Year 11 and 12 students", "Minimum GPA of 3.5"],
+    application: ["Online", "In Person"],
+    tests: ["ACER Scholarship Test"],
+    coverage: ["Boarding", "Books", "Tuition"],
+  },
+  {
+    id: 3,
+    name: "Scholarship Title",
+    opens: "Nov 20, 2023",
+    closes: "Nov 20, 2023",
+    logo: "/logos/mu-logo.png",
     elegibility: ["Year 11 and 12 students", "Minimum GPA of 3.5"],
     application: ["Online", "In Person"],
     tests: ["ACER Scholarship Test"],

@@ -27,10 +27,22 @@ export interface PathwayProps {
 
 export interface ScholarshipProps {
   id: number;
-  status: boolean
+  status: boolean;
   name: string;
   price: number;
   date: string;
+  logo: string;
+  elegibility: string[];
+  application: string[];
+  tests: string[];
+  coverage: string[];
+}
+
+export interface UniversityScholarshipProps {
+  id: number;
+  name: string;
+  opens: string;
+  closes: string;
   logo: string;
   elegibility: string[];
   application: string[];

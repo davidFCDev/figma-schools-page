@@ -1,6 +1,6 @@
 import { style } from "@/style";
-import Browse from "../components/browse";
-import Rankings from "../components/rankings";
+import Browse from "../components/browse-box";
+import Rankings from "../components/rankings-box";
 
 const UniversitiesTemplate = () => {
   return (

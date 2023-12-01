@@ -1,19 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
 import SpecialButton from "@/modules/common/components/special-button";
-import { ScholarshipProps } from "@/types";
+import { UniversityScholarshipProps } from "@/types";
 import React from "react";
 import { LuClock3 } from "react-icons/lu";
-import { PiHandPalmLight, PiTrophy } from "react-icons/pi";
+import { PiHandPalmLight } from "react-icons/pi";
 import { SlArrowDown, SlArrowUp } from "react-icons/sl";
 import { useState, useEffect } from "react";
 
 interface Scholarship {
-  scholarship: ScholarshipProps;
+  scholarship: UniversityScholarshipProps;
   onSelect: (scholarshipId: number) => void;
   selectedScholarship: number | null;
 }
 
-const Scholarship: React.FC<Scholarship> = ({
+const TitleResults: React.FC<Scholarship> = ({
   scholarship,
   onSelect,
   selectedScholarship,
@@ -43,16 +43,16 @@ const Scholarship: React.FC<Scholarship> = ({
       <div className="flex gap-6 items-center">
         <div className="flex gap-3 items-center p-4 bg-white rounded-3xl border border-neutral-200 shadow-xs shadow-neutral-200">
           <div className="text-2xl">
-            <PiTrophy />
+            <LuClock3 />
           </div>
-          <span>${scholarship.price.toLocaleString()}</span>
+          <span>${scholarship.opens}</span>
         </div>
 
         <div className="flex gap-3 items-center p-4 bg-white rounded-3xl border border-neutral-200 shadow-xs shadow-neutral-200">
           <div className="text-2xl">
             <LuClock3 />
           </div>
-          <span>{scholarship.date}</span>
+          <span>{scholarship.closes}</span>
         </div>
 
         <SpecialButton text="Apply" icon={<PiHandPalmLight />} />
@@ -65,4 +65,4 @@ const Scholarship: React.FC<Scholarship> = ({
   );
 };
 
-export default Scholarship;
+export default TitleResults;
