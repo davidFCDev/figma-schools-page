@@ -15,14 +15,16 @@ const Routes = () => {
           href={route.path}
           key={index}
           className={`flex items-center gap-4 font-semibold ${
-            currentPath === route.path
+            currentPath === route.path || currentPath.startsWith(route.path)
               ? "bg-darkOrange text-white"
               : "bg-white text-green"
           } px-2 py-2 rounded-full w-full`}
         >
           <span
             className={`text-2xl rounded-full p-2 ${
-              currentPath === route.path ? "bg-white text-darkOrange" : ""
+              currentPath === route.path || currentPath.startsWith(route.path)
+                ? "bg-white text-darkOrange"
+                : ""
             }`}
           >
             {route.icon}
@@ -36,5 +38,6 @@ const Routes = () => {
     </div>
   );
 };
+
 
 export default Routes;

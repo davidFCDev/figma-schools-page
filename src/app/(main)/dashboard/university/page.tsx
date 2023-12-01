@@ -1,4 +1,4 @@
-import UniversitiesTemplate from "@/modules/universities/templates";
+import UniversitiesTemplate from "@/modules/universities/templates/Universities";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

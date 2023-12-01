@@ -1,8 +1,6 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
 import { style } from "@/style";
-import { useState } from "react";
-import { RiSearchLine } from "react-icons/ri";
 import BasicSelect from "../../common/components/select";
 import Results from "../components/results";
 import SearchInput from "@/modules/common/components/search-input";

@@ -1,17 +1,15 @@
-"use client";
-/* eslint-disable @next/next/no-img-element */
 import { style } from "@/style";
 import Browse from "../components/browse";
-import Score from "../components/score";
+import Rankings from "../components/rankings";
 
-const AtarTemplate = () => {
+const UniversitiesTemplate = () => {
   return (
     <main className={`${style.page} flex flex-col gap-8`}>
       <Browse />
 
-      <Score />
+      <Rankings />
     </main>
   );
 };
 
-export default AtarTemplate;
+export default UniversitiesTemplate;
