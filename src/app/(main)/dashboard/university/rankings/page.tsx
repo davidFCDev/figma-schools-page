@@ -1,4 +1,4 @@
-import RankingsTemplate from "@/modules/universities/templates/Rankings";
+import RankingsTemplate from "@/modules/universities/templates/Ranking.template";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

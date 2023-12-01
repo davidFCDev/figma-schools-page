@@ -49,3 +49,15 @@ export interface UniversityScholarshipProps {
   tests: string[];
   coverage: string[];
 }
+
+export interface UniversityRankingProps {
+  id: number;
+  logo: string;
+  title: string;
+  global: number;
+  other: number;
+  other2: number;
+  ubication: string;
+  link: string;
+  status: string;
+}

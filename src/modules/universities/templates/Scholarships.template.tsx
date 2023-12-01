@@ -1,7 +1,7 @@
 "use client";
 import BasicSelect from "@/modules/common/components/select";
 import { style } from "@/style";
-import UniversityResults from "../components/results";
+import UniversityResults from "../components/scholarships-results";
 
 const ScholarshipsTemplate = () => {
   return (
@@ -22,7 +22,6 @@ const ScholarshipsTemplate = () => {
         </div>
 
           <UniversityResults />
-
       </div>
     </main>
   );
