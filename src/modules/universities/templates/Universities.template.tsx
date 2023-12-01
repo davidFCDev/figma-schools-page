@@ -1,13 +1,12 @@
 import { style } from "@/style";
-import Browse from "../components/browse-box";
-import Rankings from "../components/ranking-box";
+import RankingBox from "../components/ranking-box";
+import BrowseBox from "../components/browse-box";
 
 const UniversitiesTemplate = () => {
   return (
     <main className={`${style.page} flex flex-col gap-8`}>
-      <Browse />
-
-      <Rankings />
+      <BrowseBox />
+      <RankingBox />
     </main>
   );
 };

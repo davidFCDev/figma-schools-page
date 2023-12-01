@@ -61,3 +61,15 @@ export interface UniversityRankingProps {
   link: string;
   status: string;
 }
+
+export interface PopularResourcesProps {
+  id: number;
+  image: string;
+  date: string;
+  title: string;
+  description: string;
+  after: number;
+  before: number;
+  students: number;
+  avatars: string;
+}

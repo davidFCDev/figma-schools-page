@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
-const Browse = () => {
+const BrowseBox = () => {
   return (
     <div className="flex w-full items-center justify-between bg-darkOrange text-white py-20 px-14 rounded-3xl shadow">
       <div className="flex flex-col gap-6 items-start max-w-md justify-center">
@@ -22,4 +22,4 @@ const Browse = () => {
   );
 };
 
-export default Browse;
+export default BrowseBox;

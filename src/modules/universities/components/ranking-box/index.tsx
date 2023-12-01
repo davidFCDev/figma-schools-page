@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
-const Rankings = () => {
+const RankingBox = () => {
   return (
     <div className="flex w-full bg-white rounded-3xl shadow relative">
       <img
@@ -31,4 +31,4 @@ const Rankings = () => {
   );
 };
 
-export default Rankings;
+export default RankingBox;

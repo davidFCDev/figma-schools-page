@@ -6,6 +6,8 @@ import { TbCalculatorFilled } from "react-icons/tb";
 import { HiLightningBolt } from "react-icons/hi";
 import {
   PathwayProps,
+  PopularResourcesProps,
+  ResourceProps,
   Route,
   ScholarshipProps,
   UniversityRankingProps,
@@ -230,5 +232,44 @@ export const UNIVERSITY_RANKINGS: UniversityRankingProps[] = [
     ubication: "Perth, Claremont",
     link: "https://www.murdoch.edu.au/",
     status: "Private",
+  },
+];
+
+export const RESOURCES: PopularResourcesProps[] = [
+  {
+    id: 1,
+    image: "/resource-1.png",
+    date: "28 July 2022",
+    title: "WACE Accounting and Finance",
+    description:
+      "Subscribing to ReviseOnline WACE Accounting & Finance course (Units 1&2 and Units 3&4) gives you access to an exte...",
+    after: 500,
+    before: 400,
+    students: 40,
+    avatars: "/avatar-group.png",
+  },
+  {
+    id: 2,
+    image: "/resource-2.png",
+    date: "28 July 2022",
+    title: "WACE Accounting and Finance",
+    description:
+      "Subscribing to ReviseOnline WACE Accounting & Finance course (Units 1&2 and Units 3&4) gives you access to an exte...",
+    after: 500,
+    before: 678,
+    students: 11,
+    avatars: "/avatar-group.png",
+  },
+  {
+    id: 3,
+    image: "/resource-3.png",
+    date: "28 July 2022",
+    title: "WACE Accounting and Finance",
+    description:
+      "Subscribing to ReviseOnline WACE Accounting & Finance course (Units 1&2 and Units 3&4) gives you access to an exte...",
+    after: 500,
+    before: 123,
+    students: 234,
+    avatars: "/avatar-group.png",
   },
 ];
