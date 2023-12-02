@@ -25,6 +25,17 @@ export interface PathwayProps {
   features: string[];
 }
 
+export interface TestProps {
+  id: number;
+  color: string;
+  icon: string;
+  title: string;
+  subtitle: string;
+  subtitle_2: string;
+  description: string;
+  features: string[];
+}
+
 export interface ScholarshipProps {
   id: number;
   status: boolean;

@@ -4,11 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /** Texture Register */
 
 .screen {
-  background-image: url("/texture-register.png");
+  background-image: url("/textures/texture-register.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+.screen-texture {
+  background-image: url("/textures/resources-texture.png");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -24,5 +30,5 @@
 /** Arrow select */
 
 #sort {
-  appearance: none; 
+  appearance: none;
 }

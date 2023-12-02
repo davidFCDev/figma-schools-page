@@ -9,6 +9,7 @@ import {
   PopularResourcesProps,
   Route,
   ScholarshipProps,
+  TestProps,
   UniversityRankingProps,
   UniversityScholarshipProps,
 } from "@/types";
@@ -91,6 +92,54 @@ export const PATHWAYS: PathwayProps[] = [
     icon: "/icons/blue-books.png",
     title: "Apprenticeships",
     subtitle: "About the Apprenticeships",
+    description:
+      "The Australian Council for Educational Research (ACER) is an independent organization that conducts research and develops assessments, including scholarship and entrance tests, primarily for Australian educational institutions.",
+    features: [
+      "We would list your resources or affiliate programs, something that provides prep for this particular test ",
+      "We would list your resources or affiliate programs, something that provides prep for this particular test ",
+      "We would list your resources or affiliate programs, something that provides prep for this particular test ",
+    ],
+  },
+];
+
+export const TESTS: TestProps[] = [
+  {
+    id: 1,
+    color: "#8AC53E",
+    icon: "/icons/green-search.png",
+    title: "ACER",
+    subtitle: "All about the ACER Tests",
+    subtitle_2: "About the ACER Tests",
+    description:
+      "The Australian Council for Educational Research (ACER) is an independent organization that conducts research and develops assessments, including scholarship and entrance tests, primarily for Australian educational institutions.",
+    features: [
+      "We would list your resources or affiliate programs, something that provides prep for this particular test ",
+      "We would list your resources or affiliate programs, something that provides prep for this particular test ",
+      "We would list your resources or affiliate programs, something that provides prep for this particular test ",
+    ],
+  },
+  {
+    id: 2,
+    color: "#C099FC",
+    icon: "/icons/violet-check.png",
+    title: "EDU",
+    subtitle: "All about the EDU Tests",
+    subtitle_2: "About the EDU Tests",
+    description:
+      "The Australian Council for Educational Research (ACER) is an independent organization that conducts research and develops assessments, including scholarship and entrance tests, primarily for Australian educational institutions.",
+    features: [
+      "We would list your resources or affiliate programs, something that provides prep for this particular test ",
+      "We would list your resources or affiliate programs, something that provides prep for this particular test ",
+      "We would list your resources or affiliate programs, something that provides prep for this particular test ",
+    ],
+  },
+  {
+    id: 3,
+    color: "#369FFF",
+    icon: "/icons/blue-books.png",
+    title: "AAS",
+    subtitle: "All about the AAS Tests",
+    subtitle_2: "About the AAS Tests",
     description:
       "The Australian Council for Educational Research (ACER) is an independent organization that conducts research and develops assessments, including scholarship and entrance tests, primarily for Australian educational institutions.",
     features: [

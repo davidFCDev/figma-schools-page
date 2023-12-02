@@ -1,4 +1,5 @@
-import GuidesTemplate from "@/modules/guides/templates";
+import { TestProvider } from "@/lib/context/test-context";
+import GuidesTemplate from "@/modules/guides/templates/Guides.template";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,5 +8,9 @@ export const metadata: Metadata = {
 };
 
 export default function Guides() {
-  return <GuidesTemplate />;
+  return (
+    <TestProvider>
+      <GuidesTemplate />
+    </TestProvider>
+  );
 }

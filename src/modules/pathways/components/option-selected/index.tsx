@@ -6,7 +6,7 @@ import {
   PathwayContextProps,
 } from "@/lib/context/pathway-context";
 
-const Selection: React.FC = () => {
+const OptionSelected: React.FC = () => {
   const { selectedPathway } = useContext(PathwayContext) as PathwayContextProps;
 
   if (!selectedPathway) {
@@ -14,8 +14,8 @@ const Selection: React.FC = () => {
   }
 
   return (
-    <div className="p-10 flex items-start gap-10 bg-white rounded-2xl shadow-md shadow-neutral-200">
-      <div className="flex flex-col max-w-xs gap-8 items-start">
+    <div className="p-10 flex items-start gap-10 bg-white rounded-2xl shadow-md shadow-neutral-200 w-full">
+      <div className="flex flex-col max-w-sm gap-8 items-start">
         <div className="flex gap-4 items-center">
           <img src={selectedPathway.icon} alt={selectedPathway.title} />
           <h2 className="text-xl font-bold tracking-wider">
@@ -35,7 +35,7 @@ const Selection: React.FC = () => {
         </button>
       </div>
 
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 w-full">
         <h3
           className=" font-semibold text-lg"
           style={{
@@ -63,4 +63,4 @@ const Selection: React.FC = () => {
   );
 };
 
-export default Selection;
+export default OptionSelected;

@@ -10,8 +10,7 @@ interface SelectorProps {
   // If props are needed, define them here
 }
 
-const Selector: FC<SelectorProps> = () => {
-
+const PathwaySelector: FC<SelectorProps> = () => {
   const contextValue = useContext(PathwayContext) as PathwayContextProps;
 
   const { selectedPathway, handlePathwayClick } = contextValue;
@@ -37,4 +36,4 @@ const Selector: FC<SelectorProps> = () => {
   );
 };
 
-export default Selector;
+export default PathwaySelector;

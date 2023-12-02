@@ -1,3 +1,4 @@
+'use client'
 import { PATHWAYS } from "@/constants";
 import { PathwayProps } from "@/types";
 import { createContext, ReactNode, useState } from "react";
