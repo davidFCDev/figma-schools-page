@@ -73,3 +73,106 @@ export interface PopularResourcesProps {
   students: number;
   avatars: string;
 }
+
+export interface SchoolProps {
+  id: number;
+  atar: number;
+  type: string;
+  ubication: string;
+  name: string;
+  price: number;
+  logo: string;
+  gender: string;
+  location: string;
+  description: string;
+  about: string;
+  web: string;
+  sector: string;
+  level: string;
+  religion: string;
+  checks: string[];
+  performance: {
+    icsea: {
+      school_value: number;
+      average_value: number;
+    };
+    distribution: {
+      school: number[];
+      australia: number[];
+    };
+    total_enrollments: number;
+    year_range: string;
+    median_score: {
+      [year: number]: {
+        national_average: number;
+        this_school: number;
+      };
+    };
+  };
+  programs: {
+    icon: string;
+    title: string;
+    date: string;
+    type: string;
+    color: string;
+    subcolor: string;
+  }[];
+  admissions: {
+    school_fees: {
+      year_7: number;
+      year_12: number;
+    };
+    gender: string;
+    open_days: string;
+    selective_programs: {
+      icon: string;
+      title: string;
+      date: string;
+      type: string;
+      color: string;
+      subcolor: string;
+    }[];
+    scholarship_tests: {
+      icon: string;
+      title: string;
+      date: string;
+      type: string;
+      color: string;
+      subcolor: string;
+    }[];
+    scholarships_list: {
+      icon: string;
+      title: string;
+      date: string;
+      type: string;
+      color: string;
+      subcolor: string;
+    }[];
+  };
+  academic_performance: {
+    average_atar: number;
+    recipients: number;
+  };
+  financial_aid: {
+    types: string[];
+    total: number;
+  };
+  activities: {
+    clubs: number;
+    sports: number;
+  };
+  qualifications: {
+    ratio: string;
+    degrees: number;
+  };
+  facilities: {
+    smart_class: boolean;
+    labs: number;
+  };
+  cost: {
+    tuition: number;
+    add: number;
+  };
+  culture: string;
+  reviews: number;
+}

@@ -7,9 +7,7 @@ import { SCHOLARSHIPS } from "@/constants";
 import { ScholarshipProps } from "@/types";
 import { LuSearch } from "react-icons/lu";
 
-export default function SearchInput() {
-  const [isFocused, setIsFocused] = React.useState(false);
-
+export default function SearchSchools() {
   return (
     <Stack spacing={2} sx={{ width: 400 }}>
       <Autocomplete
@@ -39,9 +37,6 @@ export default function SearchInput() {
             {children}
           </div>
         )}
-        onClose={() => setIsFocused(false)}
-        onFocus={() => setIsFocused(true)}
-        onBlur={() => setIsFocused(false)}
         renderOption={(props, option) => (
           <li
             {...props}
@@ -70,7 +65,7 @@ export default function SearchInput() {
           <TextField
             {...params}
             label=""
-            placeholder="Search scholarships..."
+            placeholder="Search schools..."
             InputProps={{
               ...params.InputProps,
               type: "search",
@@ -80,7 +75,7 @@ export default function SearchInput() {
             }}
             sx={{
               position: "relative",
-              borderRadius: isFocused ? "15px 15px 0 0" : "15px",
+              borderRadius: "15px",
               backgroundColor: "white",
               boxShadow: "0px 2px 2px rgba(0, 0, 0, 0.05)",
               color: "#4F4F4F",

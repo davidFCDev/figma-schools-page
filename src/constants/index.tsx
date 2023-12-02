@@ -7,7 +7,6 @@ import { HiLightningBolt } from "react-icons/hi";
 import {
   PathwayProps,
   PopularResourcesProps,
-  ResourceProps,
   Route,
   ScholarshipProps,
   UniversityRankingProps,
@@ -121,7 +120,7 @@ export const SCHOLARSHIPS: ScholarshipProps[] = [
     name: "St Hilda's Anglican School for Girls",
     price: 20000,
     date: "Aug 20, 2023",
-    logo: "/logos/mu-logo.png",
+    logo: "/logos/school2.png",
     elegibility: ["Year 11 and 12 students", "Minimum GPA of 3.5"],
     application: ["Online", "In Person"],
     tests: ["ACER Scholarship Test"],

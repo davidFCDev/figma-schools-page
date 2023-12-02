@@ -3,7 +3,7 @@
 import { style } from "@/style";
 import BasicSelect from "../../common/components/select";
 import Results from "../components/results";
-import SearchInput from "@/modules/common/components/search-input";
+import SearchScholarship from "@/modules/common/components/search-scholarship";
 
 const ScholarshipsTemplate = () => {
   return (
@@ -19,7 +19,7 @@ const ScholarshipsTemplate = () => {
             Find Scholarships across Western Australia
           </h1>
 
-          <SearchInput />
+          <SearchScholarship />
         </div>
       </div>
 

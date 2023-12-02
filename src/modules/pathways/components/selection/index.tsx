@@ -26,14 +26,22 @@ const Selection: React.FC = () => {
           {selectedPathway.description}
         </p>
         <button
-          className={`text-${selectedPathway.color} font-semibold hover:underline`}
+          className="font-semibold hover:underline"
+          style={{
+            color: selectedPathway?.color,
+          }}
         >
           Learn more
         </button>
       </div>
 
       <div className="flex flex-col gap-6">
-        <h3 className={`text-${selectedPathway.color} font-semibold text-lg`}>
+        <h3
+          className=" font-semibold text-lg"
+          style={{
+            color: selectedPathway?.color,
+          }}
+        >
           Relevant Resources
         </h3>
         <div className="flex flex-col gap-4">
