@@ -3,7 +3,7 @@
 import { style } from "@/style";
 import BasicSelect from "../../common/components/select";
 import Results from "../components/results";
-import SearchScholarship from "@/modules/common/components/search-scholarship";
+import SearchScholarship from "../components/search-scholarship";
 
 const ScholarshipsTemplate = () => {
   return (
