@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function BasicSelect({ label }: { label?: string }) {
   const [filter, setFilter] = useState("");
@@ -25,7 +25,7 @@ export default function BasicSelect({ label }: { label?: string }) {
             backgroundColor: "white",
             boxShadow: "0px 2px 2px rgba(0, 0, 0, 0.05)",
             border: "none",
-            fontSize: 18,
+            fontSize: 16,
             fontWeight: 600,
             color: "#4F4F4F",
             "& .MuiOutlinedInput-notchedOutline": {

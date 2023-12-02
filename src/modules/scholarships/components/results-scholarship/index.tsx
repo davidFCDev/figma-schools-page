@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { SCHOLARSHIPS } from "@/constants";
 import Scholarship from "./scholarship";
-import DropDown from "./dropdown";
+import ScholarshipDropdown from "./scholarship-dropdown";
 import { useState } from "react";
 
 interface ResultsProps {}
@@ -31,7 +31,7 @@ const Results: React.FC<ResultsProps> = () => {
           />
 
           {selectedScholarship === scholarship.id && (
-            <DropDown scholarship={scholarship} />
+            <ScholarshipDropdown scholarship={scholarship} />
           )}
         </div>
       ))}
