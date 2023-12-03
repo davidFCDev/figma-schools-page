@@ -6,7 +6,7 @@ import { GenderIcon } from "../gender-icon";
 const Affiliation = ({ selectedSchool }: { selectedSchool: SchoolProps }) => {
   return (
     <div className="flex flex-col gap-5 p-5 bg-white rounded-3xl border border-neutral-200">
-      <h3 className="text-2xl font-bold tracking-wide pl-6">
+      <h3 className="text-xl font-bold tracking-wide pl-6">
         Type and Affiliation
       </h3>
       <div className="flex items-center justify-between">

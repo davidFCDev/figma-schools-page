@@ -120,7 +120,7 @@ export interface SchoolProps {
         national_average: number;
         this_school: number;
       };
-    };
+    }[];
   };
   programs: {
     icon: string;
@@ -133,6 +133,8 @@ export interface SchoolProps {
   admissions: {
     school_fees: {
       year_7: number;
+      year_10: number;
+      year_11: number;
       year_12: number;
     };
     gender: string;

@@ -6,7 +6,7 @@ export default function PageLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex w-full bg-gray">
+    <div className="flex items-start w-full bg-gray">
       <Nav />
       <div className="w-full">{children}</div>
     </div>

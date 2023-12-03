@@ -7,16 +7,28 @@ import { SchoolProps } from "@/types";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import SchoolHeader from "../components/results-schools/header-school";
-import Affiliation from "../components/results-schools/affiliation";
-import Selector from "../components/results-schools/selector";
+import SchoolHeader from "../components/header-school";
+import Affiliation from "../components/affiliation";
+import Selector from "../components/selector";
 import { PiCheck } from "react-icons/pi";
+import Admissions from "../components/admissions";
+import AboutBox from "../components/about-box";
+import { LightTooltip } from "@/modules/common/components/tooltip";
+import { Fade } from "@mui/material";
+import ProgramsOfferings from "../components/programs-offerings";
+import EnrollmentsPerformance from "../components/enrollments-performance";
 
 const SelectedSchoolTemplate = () => {
   const { id } = useParams();
   const [selectedSchool, setSelectedSchool] = useState<SchoolProps | null>(
     null
   );
+  const [selectedComponent, setSelectedComponent] =
+    useState<string>("programsOfferings");
+
+  const handleSelectComponent = (component: string) => {
+    setSelectedComponent(component);
+  };
 
   useEffect(() => {
     const school = SCHOOLS.find((school) => school.id === Number(id));
@@ -44,61 +56,97 @@ const SelectedSchoolTemplate = () => {
   }
 
   return (
-    <main className={`${style.page} flex flex-col gap-5 items-start`}>
-      <SchoolHeader selectedSchool={selectedSchool} />
+    <main className={`${style.page} flex flex-col gap-12 items-start`}>
+      <div className="flex flex-col gap-5">
+        <SchoolHeader selectedSchool={selectedSchool} />
 
-      <div className="flex justify-between gap-5 w-full">
-        <div className="flex flex-col gap-5 w-[280%]">
-          <img src={selectedSchool.map} alt="map" className="w-full" />
-          <Selector />
-        </div>
-
-        <div className="flex flex-col justify-between">
-          <div className="flex flex-col gap-5 p-5 bg-white rounded-3xl border border-neutral-200">
-            <div className="flex justify-between items-center">
-              <h3 className="text-2xl font-bold tracking-wide pl-6">About</h3>
-              <button className="text-darkGreen font-bold shadow shadow-neutral-300 px-5 py-1 rounded-xl">
-                Visit Website
-              </button>
-            </div>
-            <p className="font-normal">{selectedSchool.about}</p>
-          </div>
-
-          <Affiliation selectedSchool={selectedSchool} />
-
-          <div className="flex justify-between bg-white rounded-3xl items-start p-5 border border-neutral-200">
-            {selectedSchool.checks.map((check, index) => (
-              <div
-                key={index}
-                className="flex flex-col gap-2 font-semibold items-center text-center px-4"
+        <div className="flex justify-between gap-5 w-full">
+          <div className="flex flex-col gap-5 w-[280%]">
+            <img src={selectedSchool.map} alt="map" className="w-full" />
+            <div className="flex items-center gap-2 text-base text-neutral-500 font-semibold w-full justify-between">
+              <LightTooltip
+                title="Check the enrollment & performance"
+                arrow
+                TransitionComponent={Fade}
+                onClick={() => handleSelectComponent("enrollmentPerformance")}
               >
-                <div className="text-2xl">
-                  <PiCheck />
+                <div
+                  className={`${
+                    selectedComponent === "enrollmentPerformance" &&
+                    "border-2 border-green2 text-green2"
+                  } flex gap-3 items-center p-5 bg-white rounded-2xl shadow-sm shadow-neutral-200 hover:cursor-pointer`}
+                >
+                  <img src="/icons/chart-icon.png" alt="chart" />
+                  <span>Enrollment & Performance</span>
                 </div>
-                <span className="text-sm">{check}</span>
-              </div>
-            ))}
+              </LightTooltip>
+              <LightTooltip
+                title="Look the programs & offerings"
+                arrow
+                TransitionComponent={Fade}
+                onClick={() => handleSelectComponent("programsOfferings")}
+              >
+                <div
+                  className={`${
+                    selectedComponent === "programsOfferings" &&
+                    "border-2 border-green2 text-green2"
+                  } flex gap-3 items-center p-5 bg-white rounded-2xl shadow-sm shadow-neutral-200 hover:cursor-pointer`}
+                >
+                  <img src="/icons/list2-icon.png" alt="list2" />
+                  <span>Programs & Offerings</span>
+                </div>
+              </LightTooltip>
+              <LightTooltip
+                title="Contemplate the admissions"
+                arrow
+                TransitionComponent={Fade}
+                onClick={() => handleSelectComponent("admissions")}
+              >
+                <div
+                  className={`${
+                    selectedComponent === "admissions" &&
+                    "border-2 border-green2 text-green2"
+                  } flex gap-3 items-center p-5 bg-white rounded-2xl shadow-sm shadow-neutral-200 hover:cursor-pointer`}
+                >
+                  <img src="/icons/balance-icon.png" alt="balance" />
+                  <span>Admissions</span>
+                </div>
+              </LightTooltip>
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-between">
+            <AboutBox selectedSchool={selectedSchool} />
+
+            <Affiliation selectedSchool={selectedSchool} />
+
+            <div className="flex justify-between bg-white rounded-3xl items-start p-5 border border-neutral-200">
+              {/* Selector */}
+              {selectedSchool.checks.map((check, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col gap-2 font-semibold items-center text-center px-4"
+                >
+                  <div className="text-2xl">
+                    <PiCheck />
+                  </div>
+                  <span className="text-sm">{check}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
-      <div>
-        <div>
-          <h2>List Title</h2>
-          {selectedSchool.programs.map((item, index) => (
-            <div key={index} className="flex gap-5 items-center">
-              <div style={{ backgroundColor: item.subcolor }}>
-                <img src={item.icon} alt="list-icon" className="" />
-              </div>
-              <div className="flex flex-col gap-1">
-                <h3 className="font-semibold text-lg">{item.title}</h3>
-                <span className="text-sm">{item.date}</span>
-              </div>
-              <span>{item.type}</span>
-            </div>
-          ))}
-        </div>
-      </div>
+      {selectedComponent === "enrollmentPerformance" && (
+        <EnrollmentsPerformance selectedSchool={selectedSchool} />
+      )}
+      {selectedComponent === "programsOfferings" && (
+        <ProgramsOfferings selectedSchool={selectedSchool} />
+      )}
+      {selectedComponent === "admissions" && (
+        <Admissions selectedSchool={selectedSchool} />
+      )}
     </main>
   );
 };

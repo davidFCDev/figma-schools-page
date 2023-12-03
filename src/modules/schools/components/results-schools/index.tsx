@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { SCHOOLS } from "@/constants/schools";
-import SchoolDropdown from "./school-dropdown";
+import SchoolDropdown from "../school-dropdown";
 import { useState } from "react";
-import School from "./school";
+import School from "../school";
 
 interface ResultsProps {}
 
