@@ -89,11 +89,13 @@ export interface SchoolProps {
   id: number;
   atar: number;
   type: string;
+  map: string;
   ubication: string;
   name: string;
   price: number;
   logo: string;
   gender: string;
+  gender_2: string;
   location: string;
   description: string;
   about: string;

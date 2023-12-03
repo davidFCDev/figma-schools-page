@@ -30,8 +30,8 @@ const SchoolsTemplate = () => {
           alt="flower"
           className="w-26 absolute top-6 right-32"
         />
-        <div className="flex flex-col gap10 max-w-xl items-center gap-10">
-          <h1 className="text-5xl font-semibold font-averia text-center leading-tight">
+        <div className="flex flex-col max-w-lg items-center gap-10">
+          <h1 className="text-4xl font-semibold font-averia text-center leading-tight tracking-wider">
             Search all the schools in Western Australia
           </h1>
 

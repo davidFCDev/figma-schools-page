@@ -2,8 +2,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { style } from "@/style";
 import BasicSelect from "../../common/components/select";
-import Results from "../components/results";
 import SearchScholarship from "../components/search-scholarship";
+import Results from "../components/results-scholarship";
 
 const ScholarshipsTemplate = () => {
   return (
