@@ -1,3 +1,4 @@
+import { SchoolSelectedProvider } from "@/lib/context/school-selected.context";
 import SelectedSchoolTemplate from "@/modules/schools/templates/SelectedSchool.template";
 import { Metadata } from "next";
 
@@ -7,5 +8,9 @@ export const metadata: Metadata = {
 };
 
 export default function SelectedSchool() {
-  return <SelectedSchoolTemplate />;
+  return (
+    <SchoolSelectedProvider>
+      <SelectedSchoolTemplate />
+    </SchoolSelectedProvider>
+  );
 }
