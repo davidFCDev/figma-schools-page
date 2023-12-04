@@ -1,12 +1,12 @@
 "use client";
+/* eslint-disable @next/next/no-img-element */
 import { BsArrowLeft } from "react-icons/bs";
 import ProgressBar from "@/modules/common/components/progress-bar";
 import Title from "../components/title";
 import { style } from "@/style";
 import FormStepOne from "../components/form";
 
-/* eslint-disable @next/next/no-img-element */
-const StepOneTemplate = () => {
+const RegisterTemplate = () => {
   return (
     <div className="w-full font-outfit flex flex-col small:flex-row">
       <div className="flex flex-col gap-24 screen relative text-white bg-green min-h-screen p-12 overflow-hidden shadow shadow-green">
@@ -52,4 +52,4 @@ const StepOneTemplate = () => {
   );
 };
 
-export default StepOneTemplate;
+export default RegisterTemplate;

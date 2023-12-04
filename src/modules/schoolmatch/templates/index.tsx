@@ -31,7 +31,7 @@ const SchoolmatchTemplate = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-4 w-2/4">
+      <div className="flex flex-col gap-4">
         <SchoolsList handleToggle={handleToggle} />
       </div>
 
@@ -47,7 +47,7 @@ const SchoolmatchTemplate = () => {
           </div>
           <img src="/map3.png" alt="map" className="w-full" />
           <div className="absolute z-20 left-12 top-36">
-            <SchoolmatchFilters />
+            <SchoolmatchFilters styles="shadow-2xl shadow-neutral-400"/>
           </div>
         </div>
       )}

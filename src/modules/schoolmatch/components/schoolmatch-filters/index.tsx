@@ -1,10 +1,29 @@
+"use client";
 import BasicSlider from "@/modules/common/components/slider";
 import SpecialSmallButton from "@/modules/common/components/special-small-button";
 import React from "react";
+import { useState } from "react";
+import FilterOption from "../filter-option";
 
-const SchoolmatchFilters = () => {
+const SchoolmatchFilters = ({ styles }: { styles?: string }) => {
+  const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
+
+  const toggleOption = (option: string) => {
+    setSelectedOptions((prevSelected) => {
+      if (prevSelected.includes(option)) {
+        // If the option is already selected, remove it from the array
+        return prevSelected.filter((item) => item !== option);
+      } else {
+        // If the option is not selected, add it to the array
+        return [...prevSelected, option];
+      }
+    });
+  };
+
   return (
-    <div className="flex flex-col gap-10 border border-neutral-200 rounded-2xl bg-white px-8 py-5 w-full">
+    <div
+      className={`${styles} flex flex-col gap-10 border border-neutral-200 rounded-2xl bg-white px-8 py-5 w-full`}
+    >
       <div className="flex flex-col gap-5 w-full">
         <h2 className="font-semibold text-2xl">Academic Preference</h2>
         <div className="px-4">
@@ -15,43 +34,61 @@ const SchoolmatchFilters = () => {
       <div className="flex flex-col gap-6">
         <div className="flex flex-col items-start gap-5">
           <h2 className="font-semibold text-2xl">School Type</h2>
-          <div className="flex items-center justify-between w-full">
-            <div className="px-7 py-3 rounded-3xl font-semibold bg-white border border-neutral-200">
-              Private 🔒
-            </div>
-            <div className="px-7 py-3 rounded-3xl font-semibold bg-white border border-neutral-200">
-              Public 🔓
-            </div>
-            <div className="px-7 py-3 rounded-3xl font-semibold bg-white border border-neutral-200">
-              No Preference 🤷‍♀
-            </div>
+          <div className="flex items-center justify-between w-full gap-3">
+            <FilterOption
+              text="Private 🔒"
+              selectedOptions={selectedOptions}
+              toggleOption={toggleOption}
+            />
+            <FilterOption
+              text="Public 🔓"
+              selectedOptions={selectedOptions}
+              toggleOption={toggleOption}
+            />
+            <FilterOption
+              text="No Preference 🤷‍♀"
+              selectedOptions={selectedOptions}
+              toggleOption={toggleOption}
+            />
           </div>
         </div>
 
         <div className="flex flex-col items-start gap-5">
           <h2 className="font-semibold text-2xl">Kid’s interests</h2>
           <div className="flex items-center justify-between w-full">
-            <div className="px-7 py-3 rounded-3xl font-semibold bg-white border border-neutral-200">
-              Music 🎹
-            </div>
-            <div className="px-7 py-3 rounded-3xl font-semibold bg-white border border-neutral-200">
-              Sports 🏀
-            </div>
-            <div className="px-7 py-3 rounded-3xl font-semibold bg-white border border-neutral-200">
-              Science 🧪
-            </div>
+            <FilterOption
+              text="Music 🎹"
+              selectedOptions={selectedOptions}
+              toggleOption={toggleOption}
+            />
+            <FilterOption
+              text="Sports 🏀"
+              selectedOptions={selectedOptions}
+              toggleOption={toggleOption}
+            />
+            <FilterOption
+              text="Science 🧪"
+              selectedOptions={selectedOptions}
+              toggleOption={toggleOption}
+            />
           </div>
 
           <div className="flex items-center justify-between w-full">
-            <div className="px-7 py-3 rounded-3xl font-semibold bg-white border border-neutral-200">
-              Acting 🤡
-            </div>
-            <div className="px-7 py-3 rounded-3xl font-semibold bg-white border border-neutral-200">
-              Law 👨‍⚖️
-            </div>
-            <div className="px-7 py-3 rounded-3xl font-semibold bg-white border border-neutral-200">
-              Animal Welfare 🦘
-            </div>
+            <FilterOption
+              text="Acting 🤡"
+              selectedOptions={selectedOptions}
+              toggleOption={toggleOption}
+            />
+            <FilterOption
+              text="Law 👨‍⚖️"
+              selectedOptions={selectedOptions}
+              toggleOption={toggleOption}
+            />
+            <FilterOption
+              text="Animal Welfare 🦘"
+              selectedOptions={selectedOptions}
+              toggleOption={toggleOption}
+            />
           </div>
         </div>
       </div>

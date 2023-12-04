@@ -14,7 +14,7 @@ const SchoolsList = ({ handleToggle }: { handleToggle: () => void }) => {
       {SCHOOLS.map((school) => (
         <div
           key={school.id}
-          className="flex flex-col gap-5 border border-neutral-200 rounded-2xl bg-white p-5"
+          className="flex flex-col gap-5 border border-neutral-200 rounded-2xl bg-white p-5 "
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">

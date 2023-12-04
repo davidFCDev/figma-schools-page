@@ -1,5 +1,5 @@
-import StepOneTemplate from "@/modules/register/stepOne/templates";
+import RegisterTemplate from "@/modules/register/stepOne/templates";
 
 export default function Root() {
-  return <StepOneTemplate />;
+  return <RegisterTemplate />;
 }
