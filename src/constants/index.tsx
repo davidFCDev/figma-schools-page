@@ -7,6 +7,7 @@ import { HiLightningBolt } from "react-icons/hi";
 import {
   PathwayProps,
   PopularResourcesProps,
+  ResourceProps,
   Route,
   ScholarshipProps,
   TestProps,
@@ -54,6 +55,63 @@ export const ROUTES: Route[] = [
     path: "/dashboard/resources",
     name: "Study Resources",
     icon: <HiLightningBolt />,
+  },
+];
+
+export const RESOURCES_BOX: ResourceProps[] = [
+  {
+    color: "#369FFF",
+    mask1: "/shadows/blue-mask-down.png",
+    mask2: "/shadows/blue-mask-up.png",
+    title: "School Rankings",
+    subtitle: "Sorted By Year",
+    icon: "/clock.png",
+    link: "/dashboard/schools",
+  },
+  {
+    color: "#FF993A",
+    mask1: "/shadows/orange-mask-down.png",
+    mask2: "/shadows/orange-mask-up.png",
+    title: "Career Pathways",
+    subtitle: "Apprenticeships",
+    icon: "/users.png",
+    link: "/dashboard/pathways",
+  },
+  {
+    color: "#C099FC",
+    mask1: "/shadows/violet-mask-down.png",
+    mask2: "/shadows/violet-mask-up.png",
+    title: "Study Resources",
+    subtitle: "Seminars & Events",
+    icon: "/monitor.png",
+    link: "/dashboard/resources",
+  },
+  {
+    color: "#8AC53E",
+    mask1: "/shadows/green-mask-down.png",
+    mask2: "/shadows/green-mask-up.png",
+    title: "ATAR & Subjects",
+    subtitle: "ATAR Score Estimator",
+    icon: "/maths.png",
+    link: "/dashboard/atar",
+  },
+  {
+    color: "#FC99D0",
+    mask1: "/shadows/pink-mask-down.png",
+    mask2: "/shadows/pink-mask-up.png",
+    title: "University Info",
+    subtitle: "Courses & Degrees",
+    icon: "/student.png",
+    link: "/dashboard/university",
+  },
+  {
+    color: "#FFD143",
+    mask1: "/shadows/yellow-mask-down.png",
+    mask2: "/shadows/yellow-mask-up.png",
+    title: "Find Scholarships",
+    subtitle: "Upcoming Deadlines",
+    icon: "/exam.png",
+    link: "/dashboard/scholarships",
   },
 ];
 

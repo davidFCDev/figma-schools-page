@@ -10,6 +10,7 @@ export const SCHOOLS: SchoolProps[] = [
     ubication: "Perth, Subiaco",
     price: 20000,
     logo: "/logos/school-big.png",
+    small_logo: "/logos/school1.png",
     gender: "Co-ed",
     gender_2: "Both",
     location: "/map.png",
@@ -224,6 +225,7 @@ export const SCHOOLS: SchoolProps[] = [
     ubication: "Perth, Mosman Park",
     price: 20000,
     logo: "/logos/school-big.png",
+    small_logo: "/logos/school2.png",
     gender: "Girls",
     gender_2: "Female",
     location: "/map.png",
@@ -403,15 +405,15 @@ export const SCHOOLS: SchoolProps[] = [
       ],
     },
     academic_performance: {
-      average_atar: 89,
-      recipients: 78,
+      average_atar: 80,
+      recipients: 88,
     },
     financial_aid: {
       types: ["Sport-based"],
-      total: 432,
+      total: 402,
     },
     activities: {
-      clubs: 15,
+      clubs: 10,
       sports: 3,
     },
     qualifications: {
@@ -438,6 +440,7 @@ export const SCHOOLS: SchoolProps[] = [
     ubication: "Perth, Claremont",
     price: 20000,
     logo: "/logos/school-big.png",
+    small_logo: "/logos/school3.png",
     gender: "Boys",
     gender_2: "Male",
     location: "/map.png",

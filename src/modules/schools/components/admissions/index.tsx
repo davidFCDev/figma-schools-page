@@ -7,7 +7,7 @@ import SelectivePrograms from "../selective-programs";
 import ScholarshipTests from "../scholarship-tests";
 import ScholarshipList from "../scholarship-lists";
 
-const Admissions = ({selectedSchool} : {selectedSchool: SchoolProps}) => {
+const Admissions = ({ selectedSchool }: { selectedSchool: SchoolProps }) => {
   return (
     <div className="w-full flex items-start gap-5 justify-between">
       <div className="flex flex-col gap-5 w-full">
@@ -28,7 +28,7 @@ const Admissions = ({selectedSchool} : {selectedSchool: SchoolProps}) => {
             <div className="flex flex-col justify-between bg-white border border-neutral-200 rounded-2xl p-4 h-full">
               <h2 className="text-xl font-bold">👦👧 Gender</h2>
               <div className="flex gap-2 items-center justify-center">
-                <div className="text-3xl b p-2 border border-neutral-200 rounded-2xl">
+                <div className="text-3xl p-2 border border-neutral-200 rounded-xl">
                   <GenderIcon selectedSchool={selectedSchool} />
                 </div>
                 <span className="font-semibold">
@@ -47,15 +47,22 @@ const Admissions = ({selectedSchool} : {selectedSchool: SchoolProps}) => {
 
         <div className="flex justify-between items-center gap-5 w-full">
           <div className="flex flex-col gap-2 w-2/4">
+            <h2 className="text-xl font-semibold font-averia pl-5">
+              Selective Programs
+            </h2>
             <SelectivePrograms selectedSchool={selectedSchool} />
           </div>
           <div className="flex flex-col gap-2 w-2/4">
+            <h2 className="text-2xl font-semibold font-averia pl-5">
+              Scholarship Tests
+            </h2>
             <ScholarshipTests selectedSchool={selectedSchool} />
           </div>
         </div>
       </div>
 
       <div className="flex flex-col gap-2 w-2/4">
+        <h2 className="text-2xl font-semibold font-averia pl-5">List of Scholarships</h2>
         <ScholarshipList selectedSchool={selectedSchool} />
       </div>
     </div>

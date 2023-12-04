@@ -13,6 +13,7 @@ export interface ResourceProps {
   title: string;
   subtitle: string;
   icon: string;
+  link: string;
 }
 
 export interface PathwayProps {
@@ -94,6 +95,7 @@ export interface SchoolProps {
   name: string;
   price: number;
   logo: string;
+  small_logo: string;
   gender: string;
   gender_2: string;
   location: string;

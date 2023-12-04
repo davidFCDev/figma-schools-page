@@ -5,6 +5,7 @@ import BasicSchoolInfo from "../basic-info";
 import SpecialButton from "@/modules/common/components/special-button";
 import SpecialSmallButton from "@/modules/common/components/special-small-button";
 import { LuArrowRightLeft, LuHeart } from "react-icons/lu";
+import Link from "next/link";
 
 const SchoolHeader = ({ selectedSchool }: { selectedSchool: SchoolProps }) => {
   return (
@@ -27,9 +28,9 @@ const SchoolHeader = ({ selectedSchool }: { selectedSchool: SchoolProps }) => {
           </div>
         </div>
         <div className="flex gap-4 items-center">
-          <div className="text-lg">
+          <Link href={"/dashboard/schools/compare"} className="text-lg">
             <SpecialButton text="Compare" icon={<LuArrowRightLeft />} />
-          </div>
+          </Link>
           <SpecialSmallButton icon={<LuHeart />} />
         </div>
       </div>
