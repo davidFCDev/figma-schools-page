@@ -11,9 +11,10 @@ interface School {
   school: SchoolProps;
   onSelect: (schoolId: number) => void;
   selectedSchool: number | null;
+  icon: React.ReactNode;
 }
 
-const School: React.FC<School> = ({ school, onSelect, selectedSchool }) => {
+const School: React.FC<School> = ({ school, onSelect, selectedSchool, icon }) => {
   const [isArrowUp, setIsArrowUp] = useState(false);
 
   const handleSelect = () => {
@@ -39,7 +40,7 @@ const School: React.FC<School> = ({ school, onSelect, selectedSchool }) => {
       <div className="flex gap-6 items-center text-base">
         <BasicSchoolInfo school={school} />
 
-        <SpecialSmallButton icon={<RiHeartLine />} />
+        <SpecialSmallButton icon={icon} css="p-1"/>
 
         <div onClick={handleSelect} className="hover:cursor-pointer">
           {isArrowUp ? <SlArrowUp /> : <SlArrowDown />}

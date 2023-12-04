@@ -31,7 +31,7 @@ const SchoolHeader = ({ selectedSchool }: { selectedSchool: SchoolProps }) => {
           <Link href={"/dashboard/schools/compare"} className="text-lg">
             <SpecialButton text="Compare" icon={<LuArrowRightLeft />} />
           </Link>
-          <SpecialSmallButton icon={<LuHeart />} />
+          <SpecialSmallButton icon={<LuHeart />} css="p-2"/>
         </div>
       </div>
     </div>

@@ -39,7 +39,7 @@ const Admissions = ({ selectedSchool }: { selectedSchool: SchoolProps }) => {
             <div className="flex flex-col justify-between bg-white border border-neutral-200 rounded-2xl p-4 h-full">
               <h2 className="text-xl font-bold">🗓️ Open Days</h2>
               <div className="flex gap-2 items-center justify-center">
-                <SpecialSmallButton text="Find out more" />
+                <SpecialSmallButton text="Find out more" css="px-2 py-1"/>
               </div>
             </div>
           </div>

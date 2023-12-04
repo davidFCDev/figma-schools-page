@@ -2,12 +2,14 @@
 
 import { SCHOOLS } from "@/constants/schools";
 import SchoolDropdown from "../school-dropdown";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import School from "../school";
 
-interface ResultsProps {}
+interface ResultsProps {
+  icon: ReactNode;
+}
 
-const SchoolResults: React.FC<ResultsProps> = () => {
+const SchoolResults: React.FC<ResultsProps> = ({icon}) => {
   const [selectedSchool, setSelectedSchool] = useState<number | null>(
     SCHOOLS.length > 0 ? SCHOOLS[0].id : null
   );
@@ -27,6 +29,7 @@ const SchoolResults: React.FC<ResultsProps> = () => {
             selectedSchool={selectedSchool}
             school={school}
             onSelect={handleSchoolSelect}
+            icon={icon}
           />
 
           {selectedSchool === school.id && <SchoolDropdown school={school} />}

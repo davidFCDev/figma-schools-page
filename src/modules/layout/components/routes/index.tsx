@@ -32,9 +32,9 @@ const Routes = () => {
           <h3 className="text-base hover:scale-105 transform transition-all">{route.name}</h3>
         </Link>
       ))}
-      <div className="pl-5">
+      <Link href={"/dashboard/schoolmatch"} className="pl-5">
         <SpecialButton text="SchoolMatch" />
-      </div>
+      </Link>
     </div>
   );
 };

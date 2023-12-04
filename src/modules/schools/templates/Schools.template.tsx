@@ -7,6 +7,7 @@ import { SchoolContext } from "@/lib/context/schools-context";
 import { useContext } from "react";
 import FilterSchools from "../components/filter-schools";
 import SchoolResults from "../components/results-schools";
+import { RiHeartLine } from "react-icons/ri";
 
 const SchoolsTemplate = () => {
   const context = useContext(SchoolContext);
@@ -44,7 +45,7 @@ const SchoolsTemplate = () => {
       <FilterSchools />
 
       <div>
-        <SchoolResults />
+        <SchoolResults icon={<RiHeartLine />}/>
       </div>
     </main>
   );

@@ -29,7 +29,7 @@ const cellStyle = {
 
 const schools = SCHOOLS;
 
-export default function CompareTable() {
+export default function CompareTable({handleToggle}: {handleToggle: () => void}) {
   return (
     <TableContainer
       sx={{
@@ -55,6 +55,7 @@ export default function CompareTable() {
                       text="Add"
                       icon={<GoPlus />}
                       css="px-3 py-1"
+                      onClick={handleToggle}
                     />
                   </div>
                 </div>
