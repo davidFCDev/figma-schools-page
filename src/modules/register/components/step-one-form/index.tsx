@@ -7,6 +7,9 @@ const StepOneForm = () => {
   const [error, setError] = useState<string | null>(null);
   const [selectedOption, setSelectedOption] = useState("");
 
+  // TODO: User and value context
+  // TODO: Handle submit and errors
+
   const handleOptionChange = (e: any) => {
     setSelectedOption(e.target.value);
   };
@@ -19,7 +22,6 @@ const StepOneForm = () => {
       return;
     }
 
-    // TODO: Send the value to the next route
     router.push("/register/step-two");
   };
   return (

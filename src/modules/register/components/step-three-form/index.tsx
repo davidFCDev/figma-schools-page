@@ -7,10 +7,10 @@ const StepThreeForm = () => {
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
 
-  // TODO: Validate form and errors with context
+  // TODO: User and value context
+  // TODO: Handle submit and errors
 
   const handleSubmit = (e: any) => {
-    // TODO: Send value to the next route
     e.preventDefault();
     router.push("/register/step-four");
   };

@@ -9,18 +9,19 @@ const StepTwoForm = () => {
   const router = useRouter();
   const [selectedInput, setSelectedInput] = useState<string | null>(null);
 
+  // TODO: User and value context
+  // TODO: Handle submit and errors
+
   const handleDivClick = (inputName: string) => {
     setSelectedInput(inputName === selectedInput ? null : inputName);
   };
 
   const handleSubmit = (e: any) => {
-    // TODO: Send value to the next route
     e.preventDefault();
     router.push("/register/step-three");
   };
 
   const handleSkip = (e: any) => {
-    // TODO: Skip values and send to the next route
     e.preventDefault();
     router.push("/register/step-three");
   };

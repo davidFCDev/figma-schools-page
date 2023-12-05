@@ -4,10 +4,12 @@ import { style } from "@/style";
 import { useRouter } from "next/navigation";
 
 const StepFourCheck = () => {
+  // TODO: User and value context
+  // TODO: Handle submit and errors
+
   const router = useRouter();
 
   const handleSubmit = (e: any) => {
-    // TODO: Send value to the next route
     e.preventDefault();
     router.push("/dashboard/home");
   };
@@ -15,7 +17,7 @@ const StepFourCheck = () => {
   return (
     <div className="flex flex-col gap-5 w-full small:w-4/6 items-start">
       <h2 className={`${style.title}`}>Check your email</h2>
-      <p className={`${style.subtitle}`}>
+      <p className={`${style.subtitle} small:max-w-md`}>
         We’ve sent an email to johndoe@harvard.edu with a link to activate your
         account
       </p>

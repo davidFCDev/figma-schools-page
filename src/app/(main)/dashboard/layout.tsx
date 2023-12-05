@@ -1,4 +1,4 @@
-import Nav from "@/modules/layout/templates/nav";
+import Navbar from "@/modules/layout/templates/nav";
 
 export default function PageLayout({
   children,
@@ -7,8 +7,8 @@ export default function PageLayout({
 }) {
   return (
     <div className="flex items-start w-full bg-gray">
-      <Nav />
-      <div className="w-full">{children}</div>
+      <Navbar />
+      <div className="w-full mt-10 small:mt-0">{children}</div>
     </div>
   );
 }
