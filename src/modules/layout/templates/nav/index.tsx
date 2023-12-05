@@ -2,20 +2,29 @@
 "use client";
 import { IoIosArrowDown } from "react-icons/io";
 import Routes from "../../components/routes";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SpecialSmallButton from "@/modules/common/components/special-small-button";
 import { RxCross2 } from "react-icons/rx";
 import { MdMenu } from "react-icons/md";
 import { AnimatePresence, motion } from "framer-motion";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { ROUTES } from "@/constants";
+import Link from "next/link";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const currentPath = usePathname();
+  const router = useRouter();
 
   const handleShow = () => {
     setShow(!show);
+  };
+
+  const handleLinkClick = (path: string) => {
+    setTimeout(() => {
+      setShow(false);
+      router.push(path);
+    }, 100);
   };
 
   return (
@@ -71,7 +80,44 @@ const Navbar = () => {
             </div>
             <img src="/logo-edufy2.png" alt="logo" className="w-32" />
             <div className="flex flex-col gap-10 items-center">
-              <Routes />
+              <div className="flex flex-col gap-3 small:gap-4 items-start">
+                {ROUTES.map((route, index) => (
+                  <Link
+                    href={route.path}
+                    key={index}
+                    onClick={() => handleLinkClick(route.path)}
+                    className={`flex items-center gap-3 small:gap-4 font-semibold ${
+                      currentPath === route.path ||
+                      currentPath.startsWith(route.path)
+                        ? "bg-darkOrange text-white"
+                        : "bg-white text-green"
+                    } px-1 small:px-2 py-1 small:py-2 rounded-full w-full`}
+                  >
+                    <span
+                      className={`text-xl small:text-2xl rounded-full p-1 small:p-2 ${
+                        currentPath === route.path ||
+                        currentPath.startsWith(route.path)
+                          ? "bg-white text-darkOrange"
+                          : ""
+                      }`}
+                    >
+                      {route.icon}
+                    </span>
+                    <h3 className="text-sm small:text-base hover:scale-105 transform transition-all">
+                      {route.name}
+                    </h3>
+                  </Link>
+                ))}
+                <Link
+                  href={"/dashboard/schoolmatch"}
+                  className="pl-3 small:pl-6"
+                >
+                  <SpecialSmallButton
+                    text="SchoolMatch"
+                    css="px-8 py-1 small:py-2"
+                  />
+                </Link>
+              </div>
 
               <img src="/light.png" alt="light" className="w-32" />
               <div className="flex items-center w-full justify-between font-semibold">

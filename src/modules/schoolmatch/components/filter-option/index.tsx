@@ -13,7 +13,7 @@ const FilterOption: React.FC<FilterOptionProps> = ({
 }) => {
   return (
     <div
-      className={`px-7 py-3 rounded-3xl font-semibold bg-white border hover:cursor-pointer ${
+      className={`text-sm small:text-base px-5 small:px-7 py-2 small:py-3 rounded-2xl small:rounded-3xl font-semibold bg-white border hover:cursor-pointer ${
         selectedOptions.includes(text)
           ? "border-yellow bg-yellowPalid"
           : "border-neutral-200"

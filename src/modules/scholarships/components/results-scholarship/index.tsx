@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { SCHOLARSHIPS } from "@/constants";
-import Scholarship from "./scholarship";
+import ScholarshipHeader from "./scholarship-header";
 import ScholarshipDropdown from "./scholarship-dropdown";
 import { useState } from "react";
 
@@ -22,9 +22,9 @@ const Results: React.FC<ResultsProps> = () => {
       {SCHOLARSHIPS.map((scholarship) => (
         <div
           key={scholarship.id}
-          className="bg-gray border border-neutral-200 rounded-3xl px-4 py-6 flex flex-col gap-8"
+          className="bg-gray border border-neutral-200 rounded-3xl px-3 small:px-4 py-4 small:py-6 flex flex-col gap-8"
         >
-          <Scholarship
+          <ScholarshipHeader
             selectedScholarship={selectedScholarship}
             scholarship={scholarship}
             onSelect={handleScholarshipClick}

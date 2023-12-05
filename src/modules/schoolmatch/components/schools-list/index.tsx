@@ -19,14 +19,14 @@ const SchoolsList = ({ handleToggle }: { handleToggle: () => void }) => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <img src={school.small_logo} alt={school.name} className="w-14" />
-              <h3 className="max-w-[180px] text-lg font-semibold">
+              <h3 className="max-w-[150px] small:max-w-[180px] text-base small:text-lg font-semibold">
                 {school.name}
               </h3>
             </div>
             <SpecialSmallButton icon={<RiHeartLine />} css="p-1" />
           </div>
 
-          <div className="flex items-center justify-between text-xs">
+          <div className="flex flex-wrap small:flex-nowrap gap-y-2 small:gap-y-0 items-center justify-between text-xs">
             <div className="flex items-center gap-2 px-4 py-2 border border-neutral-200 rounded-2xl">
               <GrLocation />
               <span>{school.ubication}</span>
@@ -44,7 +44,7 @@ const SchoolsList = ({ handleToggle }: { handleToggle: () => void }) => {
               <span>{school.gender}</span>
             </div>
             <button
-              className="bg-darkOrange p-2 text-3xl text-white rounded-2xl hover:bg-orange"
+              className="bg-darkOrange p-2 text-2xl small:text-3xl text-white rounded-xl small:rounded-2xl hover:bg-orange"
               onClick={handleToggle}
             >
               <IoExpand />

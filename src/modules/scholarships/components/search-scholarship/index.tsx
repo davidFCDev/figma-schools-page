@@ -9,7 +9,7 @@ import { LuSearch } from "react-icons/lu";
 
 export default function SearchScholarship() {
   return (
-    <Stack spacing={2} sx={{ width: 400 }}>
+    <Stack spacing={2} sx={{ width: "75%" }}>
       <Autocomplete
         freeSolo
         id="free-solo-2-demo"

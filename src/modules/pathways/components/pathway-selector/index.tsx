@@ -6,9 +6,7 @@ import {
   PathwayContextProps,
 } from "@/lib/context/pathway-context";
 
-interface SelectorProps {
-  // If props are needed, define them here
-}
+interface SelectorProps {}
 
 const PathwaySelector: FC<SelectorProps> = () => {
   const contextValue = useContext(PathwayContext) as PathwayContextProps;
@@ -16,11 +14,11 @@ const PathwaySelector: FC<SelectorProps> = () => {
   const { selectedPathway, handlePathwayClick } = contextValue;
 
   return (
-    <div className="flex justify-center gap-8">
+    <div className="flex flex-wrap small:flex-nowrap justify-center gap-3 small:gap-8">
       {PATHWAYS.map((pathway) => (
         <div
           key={pathway.id}
-          className="border border-white p-5 flex items-center bg-white rounded-2xl shadow-md shadow-neutral-200 gap-4 hover:cursor-pointer"
+          className="border border-white p-4 small:p-5 flex items-center bg-white rounded-2xl shadow-md shadow-neutral-200 gap-2 small:gap-4 hover:cursor-pointer"
           style={{
             borderColor:
               selectedPathway?.id === pathway.id ? pathway.color : "",
@@ -28,8 +26,14 @@ const PathwaySelector: FC<SelectorProps> = () => {
           }}
           onClick={() => handlePathwayClick(pathway)}
         >
-          <img src={pathway.icon} alt={pathway.title} />
-          <h2 className="text-lg tracking-wider">{pathway.title}</h2>
+          <img
+            src={pathway.icon}
+            alt={pathway.title}
+            className="w-7 small:w-12"
+          />
+          <h2 className="text-sm small:text-lg tracking-wider font-semibold">
+            {pathway.title}
+          </h2>
         </div>
       ))}
     </div>

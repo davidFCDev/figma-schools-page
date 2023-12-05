@@ -14,8 +14,10 @@ const SchoolmatchTemplate = () => {
   };
 
   return (
-    <main className={`${style.page} flex gap-8 font-averia`}>
-      <div className="flex flex-col gap-8 w-2/4 ">
+    <main
+      className={`${style.page} flex flex-col small:flex-row gap-8 font-averia`}
+    >
+      <div className="flex flex-col gap-8 small:w-2/4 ">
         <SchoolmatchFilters />
 
         <div className="relative">
@@ -24,7 +26,7 @@ const SchoolmatchTemplate = () => {
           <div className="absolute bottom-5 right-5">
             <SpecialSmallButton
               text="Expand Map"
-              css="px-10 py-1 text-xl"
+              css="px-10 small:px-16 py-1 text-sm small:text-base"
               onClick={handleToggle}
             />
           </div>
@@ -41,14 +43,14 @@ const SchoolmatchTemplate = () => {
             <img src="/logo-edufy2.png" alt="logo" className="" />
             <SpecialSmallButton
               text="Exit Map"
-              css="px-10 py-1 text-xl"
+              css="px-5 small:px-10 py-1 text-sm small:text-xl"
               onClick={handleToggle}
             />
           </div>
           <img src="/map3.png" alt="map" className="w-full" />
-          <div className="absolute z-20 left-12 top-36">
-            <SchoolmatchFilters styles="shadow-2xl shadow-neutral-400"/>
-          </div>
+          {/* <div className="absolute z-20 left-12 top-36">
+            <SchoolmatchFilters styles="shadow-2xl shadow-neutral-400" />
+          </div> */}
         </div>
       )}
     </main>
