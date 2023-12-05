@@ -3,7 +3,7 @@ import React from "react";
 
 const GreenBox = () => {
   return (
-    <div className="text-white bg-green flex px-6 small:px-16 py-5 small:py-10 rounded-3xl items-start justify-between mask relative w-full">
+    <div className="text-white bg-green flex px-6 small:px-16 py-5 small:py-10 rounded-2xl small:rounded-3xl items-start justify-between mask relative w-full">
       <div className="flex flex-col gap-5 items-start small:max-w-md z-10">
         <h1 className="text-3xl font-semibold font-averia tracking-wider leading-tight">
           Get Discounts on Learning Materials

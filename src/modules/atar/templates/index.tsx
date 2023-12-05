@@ -8,7 +8,7 @@ const AtarTemplate = () => {
   return (
     <main className={`${style.page} flex flex-col gap-8`}>
       <Browse />
-
+      
       <Score />
     </main>
   );

@@ -11,14 +11,14 @@ const ResourcesTemplate = () => {
       <GreenBox />
 
       <div className="flex flex-col items-center relative">
-        <h2 className="font-bold text-5xl font-averia text-darkOrange">
+        <h2 className="font-bold text-4xl small:text-5xl font-averia text-darkOrange text-center small:text-left">
           Popular Resources
         </h2>
 
         <img
           src="/green-line2.png"
           alt="green-line"
-          className="absolute -bottom-6 right-48"
+          className="absolute -bottom-6 small:right-48 w-40 small:w-72"
         />
       </div>
 

@@ -18,11 +18,11 @@ const UniversityResults: React.FC<ResultsProps> = () => {
   };
 
   return (
-    <div className="w-full flex flex-col gap-10 justify-center p-3 bg-white rounded-3xl font-averia text-lg font-semibold ">
+    <div className="w-full flex flex-col gap-10 justify-center p-3 bg-white rounded-2xl small:rounded-3xl font-averia text-lg font-semibold ">
       {UNIVERSITY_SCHOLARSHIPS.map((scholarship) => (
         <div
           key={scholarship.id}
-          className="bg-gray border border-neutral-200 rounded-3xl px-4 py-6 flex flex-col gap-8"
+          className="bg-gray border border-neutral-200 rounded-2xl small:rounded-3xl px-4 py-6 flex flex-col gap-8"
         >
           <TitleResults
             selectedScholarship={selectedScholarship}

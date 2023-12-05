@@ -4,7 +4,13 @@ import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import React, { useState } from "react";
 
-export default function BasicSelect({ label }: { label?: string }) {
+export default function BasicSelect({
+  label,
+  width,
+}: {
+  label?: string;
+  width?: number;
+}) {
   const [filter, setFilter] = useState("");
 
   const handleChange = (event: SelectChangeEvent) => {
@@ -12,8 +18,10 @@ export default function BasicSelect({ label }: { label?: string }) {
   };
 
   return (
-    <Box sx={{ minWidth: 160 }}>
-      <FormControl sx={{ m: 1, minWidth: 160 }}>
+    <Box sx={width ? { minWidth: width } : { width: 150 }}>
+      <FormControl
+        sx={width ? { minWidth: width, m: 1 } : { width: 150, m: 1 }}
+      >
         <Select
           value={filter}
           onChange={handleChange}

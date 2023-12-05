@@ -14,8 +14,8 @@ const RankingResults = () => {
           key={item.id}
           className="flex justify-between bg-white rounded-3xl p-5 font-averia shadow shadow-neutral-200 border border-neutral-200"
         >
-          <div className="flex gap-10">
-            <img src={item.logo} alt={item.title} />
+          <div className="flex gap-10 items-start">
+            <img src={item.logo} alt={item.title} className="w-10 small:w-40"/>
 
             <div className="flex flex-col gap-5 items-start">
               <h3 className="text-xl font-semibold">{item.title}</h3>

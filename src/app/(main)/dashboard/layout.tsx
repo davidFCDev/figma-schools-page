@@ -8,7 +8,7 @@ export default function PageLayout({
   return (
     <div className="flex items-start w-full bg-gray">
       <Navbar />
-      <div className="w-full mt-10 small:mt-0">{children}</div>
+      <div className="w-full mt-12 small:mt-0">{children}</div>
     </div>
   );
 }

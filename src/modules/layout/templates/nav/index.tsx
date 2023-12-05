@@ -41,10 +41,14 @@ const Navbar = () => {
             icon={<MdMenu />}
           />
           <div className="text-xl font-bold font-averia">
-            {ROUTES.map((route) =>
-              route.path === currentPath ? route.name : null
+            {ROUTES.map((route, index) =>
+              route.path === currentPath ? (
+                <div key={index}>
+                  <span>{route.name}</span>
+                  <hr className="border-2 border-darkGreen w-[60%]" />
+                </div>
+              ) : null
             )}
-            <hr className="border-2 border-darkGreen w-[60%]" />
           </div>
         </div>
       )}

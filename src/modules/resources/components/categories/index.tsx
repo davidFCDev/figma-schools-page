@@ -20,7 +20,7 @@ const Categories: React.FC = () => {
   };
 
   return (
-    <div className="flex pt-10 justify-center w-full gap-6 font-rubik">
+    <div className="flex flex-wrap small:flex-nowrap pt-10 justify-center w-full gap-6 font-rubik">
       {categories.map((category, index) => (
         <button
           key={index}
