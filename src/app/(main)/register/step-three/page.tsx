@@ -1,9 +1,9 @@
-import StepThreeTemplate from "@/modules/register/stepThree/templates";
+import StepThreeTemplate from "@/modules/register/templates/stepThree.template";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Access",
-  description: "Login step three.",
+  title: "Register page",
+  description: "Third step of registration",
 };
 
 export default function StepThree() {

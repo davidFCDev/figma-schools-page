@@ -1,9 +1,9 @@
-import StepTwoTemplate from "@/modules/register/stepTwo/templates";
+import StepTwoTemplate from "@/modules/register/templates/stepTwo.template";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Access",
-  description: "Login step two.",
+  title: "Register page",
+  description: "Second step of registration",
 };
 
 export default function StepTwo() {
