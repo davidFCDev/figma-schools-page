@@ -14,7 +14,7 @@ const SchoolsList = ({ handleToggle }: { handleToggle: () => void }) => {
       {SCHOOLS.map((school) => (
         <div
           key={school.id}
-          className="flex flex-col gap-5 border border-neutral-200 rounded-2xl bg-white p-5 "
+          className="flex flex-col gap-5 border border-neutral-200 rounded-2xl bg-white p-4 small:p-5 "
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -26,7 +26,8 @@ const SchoolsList = ({ handleToggle }: { handleToggle: () => void }) => {
             <SpecialSmallButton icon={<RiHeartLine />} css="p-1" />
           </div>
 
-          <div className="flex flex-wrap small:flex-nowrap gap-y-2 small:gap-y-0 items-center justify-between text-xs">
+          {/* Desktop */}
+          <div className="hidden small:flex items-center justify-between text-xs">
             <div className="flex items-center gap-2 px-4 py-2 border border-neutral-200 rounded-2xl">
               <GrLocation />
               <span>{school.ubication}</span>
@@ -42,6 +43,34 @@ const SchoolsList = ({ handleToggle }: { handleToggle: () => void }) => {
             <div className="flex items-center gap-2 px-4 py-2 border border-neutral-200 rounded-2xl">
               <GenderIcon selectedSchool={school} />
               <span>{school.gender}</span>
+            </div>
+            <button
+              className="bg-darkOrange p-2 text-2xl small:text-3xl text-white rounded-xl small:rounded-2xl hover:bg-orange"
+              onClick={handleToggle}
+            >
+              <IoExpand />
+            </button>
+          </div>
+
+          {/* Responsive */}
+          <div className="small:hidden flex items-end justify-between text-xs">
+            <div className="flex flex-wrap gap-2 w-full items-center">
+              <div className="flex items-center gap-2 px-4 py-2 border border-neutral-200 rounded-2xl">
+                <GrLocation />
+                <span>{school.ubication}</span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 border border-neutral-200 rounded-2xl">
+                <PiBuildings />
+                <span>{school.type}</span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 border border-neutral-200 rounded-2xl">
+                <PiCertificate />
+                <span>{school.atar}</span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 border border-neutral-200 rounded-2xl">
+                <GenderIcon selectedSchool={school} />
+                <span>{school.gender}</span>
+              </div>
             </div>
             <button
               className="bg-darkOrange p-2 text-2xl small:text-3xl text-white rounded-xl small:rounded-2xl hover:bg-orange"

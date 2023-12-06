@@ -12,7 +12,7 @@ const GuidesTemplate = () => {
 
   return (
     <main className={`${style.page} flex flex-col gap-8 items-center`}>
-      <div className="flex flex-col gap-4 small:gap-8 small:max-w-2xl text-center">
+      <div className="flex flex-col gap-4 small:gap-8 small:max-w-2xl max-w-xs text-center">
         <h2 className="font-semibold text-green2 font-averia uppercase tracking-wider small:px-32 text-sm small:text-base">
           learn about Test Guides for Scholarships
         </h2>

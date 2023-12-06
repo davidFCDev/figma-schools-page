@@ -1,6 +1,6 @@
 import React from "react";
 import TableCell from "@mui/material/TableCell";
-import { PiBasketball, PiGraduationCap } from "react-icons/pi";
+import { PiGraduationCap } from "react-icons/pi";
 import { SchoolProps } from "@/types";
 
 const cellStyle = {
@@ -16,7 +16,7 @@ const Qualifications = ({ schools }: { schools: SchoolProps[] }) => {
           <div className="text-3xl">
           <PiGraduationCap />
           </div>
-          <h3 className="text-lg font-semibold">Faculty Qualifications</h3>
+          <h3 className="text-base small:text-lg font-semibold">Faculty Qualifications</h3>
         </div>
       </TableCell>
       {schools.slice(0, 2).map((school, index) => (

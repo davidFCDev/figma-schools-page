@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { UNIVERSITY_SCHOLARSHIPS } from "@/constants";
 import { useState } from "react";
-import TitleDropdown from "./title-dropdown";
-import TitleResults from "./title-results";
+import TitleDropdown from "../title-dropdown";
+import TitleResults from "../title-results";
 
 interface ResultsProps {}
 
@@ -22,7 +22,7 @@ const UniversityResults: React.FC<ResultsProps> = () => {
       {UNIVERSITY_SCHOLARSHIPS.map((scholarship) => (
         <div
           key={scholarship.id}
-          className="bg-gray border border-neutral-200 rounded-2xl small:rounded-3xl px-4 py-6 flex flex-col gap-8"
+          className="bg-gray border border-neutral-200 rounded-2xl small:rounded-3xl px-4 py-6 flex flex-col gap-8 w-full"
         >
           <TitleResults
             selectedScholarship={selectedScholarship}

@@ -29,7 +29,11 @@ const cellStyle = {
 
 const schools = SCHOOLS;
 
-export default function CompareTable({handleToggle}: {handleToggle: () => void}) {
+export default function CompareTable({
+  handleToggle,
+}: {
+  handleToggle: () => void;
+}) {
   return (
     <TableContainer
       sx={{
@@ -51,12 +55,21 @@ export default function CompareTable({handleToggle}: {handleToggle: () => void})
                 <div className="flex items-center justify-between">
                   <h2 className="text-xl font-bold">Compare Schools</h2>
                   <div className="text-xl font-semibold">
-                    <SpecialSmallButton
-                      text="Add"
-                      icon={<GoPlus />}
-                      css="px-3 py-1"
-                      onClick={handleToggle}
-                    />
+                    <div className="block small:hidden">
+                      <SpecialSmallButton
+                        text="Add"
+                        css="px-3 py-1"
+                        onClick={handleToggle}
+                      />
+                    </div>
+                    <div className="hidden small:block">
+                      <SpecialSmallButton
+                        text="Add"
+                        icon={<GoPlus />}
+                        css="px-3 py-1"
+                        onClick={handleToggle}
+                      />
+                    </div>
                   </div>
                 </div>
                 <p className="text-sm">
@@ -67,15 +80,21 @@ export default function CompareTable({handleToggle}: {handleToggle: () => void})
             </TableCell>
             {schools.slice(0, 2).map((school, index) => (
               <TableCell key={index} align="right" style={cellStyle}>
-                <div className="flex flex-col gap-4 p-2">
-                  <div className="flex gap-4 items-center justify-between">
-                    <img src={school.small_logo} alt="logo" className="w-14" />
-                    <h2 className="text-xl font-semibold">{school.name}</h2>
+                <div className="flex flex-col gap-5 small:gap-4 p-1 small:p-2">
+                  <div className="flex gap-2 small:gap-4 items-center justify-between">
+                    <img
+                      src={school.small_logo}
+                      alt="logo"
+                      className="w-10 small:w-14"
+                    />
+                    <h2 className="text-sm small:text-xl font-semibold">
+                      {school.name}
+                    </h2>
                   </div>
                   <div className="flex gap-5 items-center justify-between">
                     <Link
                       href={school.web}
-                      className="bg-darkGreen px-10 py-4 rounded-xl text-white w-full text-center"
+                      className="bg-darkGreen px-10 py-2 small:py-4 rounded-xl text-white w-full text-center"
                     >
                       View Website
                     </Link>

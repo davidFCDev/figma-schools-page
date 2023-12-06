@@ -16,7 +16,7 @@ const Activities = ({ schools }: { schools: SchoolProps[] }) => {
           <div className="text-3xl">
           <PiBasketball />
           </div>
-          <h3 className="text-lg font-semibold">Extracurricular Activities</h3>
+          <h3 className="text-base small:text-lg font-semibold">Extracurricular Activities</h3>
         </div>
       </TableCell>
       {schools.slice(0, 2).map((school, index) => (

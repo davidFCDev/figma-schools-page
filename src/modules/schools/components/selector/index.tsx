@@ -14,7 +14,7 @@ const Selector = () => {
   const { handleSelectComponent, selectedComponent } = context;
 
   return (
-    <div className="flex items-center gap-2 text-base text-neutral-500 font-semibold w-full justify-between">
+    <div className="flex flex-wrap-reverse small:flex-nowrap items-center justify-center small:justify-between gap-2 text-sm small:text-base text-neutral-500 font-semibold w-full ">
       <LightTooltip
         title="Check the enrollment & performance"
         arrow
@@ -24,7 +24,7 @@ const Selector = () => {
           className={`${
             selectedComponent === "enrollmentPerformance" &&
             "border-2 border-green2 text-green2"
-          } flex gap-3 items-center p-5 bg-white rounded-2xl shadow-sm shadow-neutral-200 hover:cursor-pointer`}
+          } flex gap-2 items-center p-2 small:p-5 bg-white rounded-2xl shadow-sm shadow-neutral-200 hover:cursor-pointer`}
           onClick={() => handleSelectComponent("enrollmentPerformance")}
         >
           <img src="/icons/chart-icon.png" alt="chart" />
@@ -40,7 +40,7 @@ const Selector = () => {
           className={`${
             selectedComponent === "programsOfferings" &&
             "border-2 border-green2 text-green2"
-          } flex gap-3 items-center p-5 bg-white rounded-2xl shadow-sm shadow-neutral-200 hover:cursor-pointer`}
+          } flex gap-2 items-center p-2 small:p-5 bg-white rounded-2xl shadow-sm shadow-neutral-200 hover:cursor-pointer`}
           onClick={() => handleSelectComponent("programsOfferings")}
         >
           <img src="/icons/list2-icon.png" alt="list2" />
@@ -56,7 +56,7 @@ const Selector = () => {
           className={`${
             selectedComponent === "admissions" &&
             "border-2 border-green2 text-green2"
-          } flex gap-3 items-center p-5 bg-white rounded-2xl shadow-sm shadow-neutral-200 hover:cursor-pointer`}
+          } flex gap-2 items-center p-2 small:p-5 bg-white rounded-2xl shadow-sm shadow-neutral-200 hover:cursor-pointer`}
           onClick={() => handleSelectComponent("admissions")}
         >
           <img src="/icons/balance-icon.png" alt="balance" />

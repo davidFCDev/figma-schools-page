@@ -110,7 +110,7 @@ const StepOneForm = () => {
           >
             Next
           </button>
-          {error && <p className="text-red-500">{error}</p>}
+          {error && <p className="text-red">{error}</p>}
         </div>
       </form>
     </div>

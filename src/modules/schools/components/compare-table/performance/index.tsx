@@ -16,7 +16,7 @@ const Performance = ({ schools }: { schools: SchoolProps[] }) => {
           <div className="text-3xl">
             <PiBookOpen />
           </div>
-          <h3 className="text-lg font-semibold">Academic Performance</h3>
+          <h3 className="text-base small:text-lg font-semibold">Academic Performance</h3>
         </div>
       </TableCell>
       {schools.slice(0, 2).map((school, index) => (

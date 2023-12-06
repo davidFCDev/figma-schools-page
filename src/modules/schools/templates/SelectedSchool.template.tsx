@@ -3,7 +3,7 @@
 
 import { style } from "@/style";
 import Link from "next/link";
-import { useContext} from "react";
+import { useContext } from "react";
 import SchoolHeader from "../components/header-school";
 import Affiliation from "../components/affiliation";
 import Selector from "../components/selector";
@@ -15,7 +15,6 @@ import EnrollmentsPerformance from "../components/enrollments-performance";
 import { SchoolSelectedContext } from "@/lib/context/school-selected.context";
 
 const SelectedSchoolTemplate = () => {
-
   const context = useContext(SchoolSelectedContext);
 
   if (!context) {
@@ -29,7 +28,7 @@ const SelectedSchoolTemplate = () => {
       <main className={`${style.page} flex flex-col gap-8 items-center `}>
         <div className="p-5 bg-white shadow shadow-neutral-200 items-center flex flex-col gap-10 rounded-3xl">
           <h3 className="text-avaria font-semibold text-xl ">
-            Sorry, we couldn’t find the school you’re looking for.
+            Sorry, we couldn’t find the school you’re looking for!
           </h3>
           <Link href="/dashboard/schools">
             <span className="underline">Back to Schools</span>
@@ -44,14 +43,17 @@ const SelectedSchoolTemplate = () => {
       <div className="flex flex-col gap-5">
         <SchoolHeader selectedSchool={selectedSchool} />
 
-        <div className="flex justify-between gap-5 w-full">
-          <div className="flex flex-col gap-5 w-[300%]">
+        <div className="flex flex-col small:flex-row justify-between gap-5 w-full">
+          <div className="flex flex-col gap-5 small:w-[300%]">
             <img src={selectedSchool.map} alt="map" className="w-full" />
 
-            <Selector />
+            {/* Desktop */}
+            <div className="hidden small:block">
+              <Selector />
+            </div>
           </div>
 
-          <div className="flex flex-col justify-between">
+          <div className="flex flex-col justify-between gap-5 small:gap-0">
             <AboutBox selectedSchool={selectedSchool} />
 
             <Affiliation selectedSchool={selectedSchool} />
@@ -65,9 +67,13 @@ const SelectedSchoolTemplate = () => {
                   <div className="text-2xl">
                     <PiCheck />
                   </div>
-                  <span className="text-sm">{check}</span>
+                  <span className="text-sm ">{check}</span>
                 </div>
               ))}
+            </div>
+
+            <div className="block small:hidden">
+              <Selector />
             </div>
           </div>
         </div>

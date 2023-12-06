@@ -23,7 +23,9 @@ const SchoolmatchFilters = ({ styles }: { styles?: string }) => {
       className={`${styles} flex flex-col items-center gap-5 small:gap-10 border border-neutral-200 rounded-2xl bg-white px-5 small:px-8 py-5 w-full`}
     >
       <div className="flex flex-col gap-5 w-full">
-        <h2 className="font-semibold text-xl small:text-2xl text-center small:text-left">Academic Preference</h2>
+        <h2 className="font-semibold text-xl small:text-2xl text-center small:text-left">
+          Academic Preference
+        </h2>
         <div className="px-4">
           <BasicSlider />
         </div>
@@ -31,8 +33,10 @@ const SchoolmatchFilters = ({ styles }: { styles?: string }) => {
 
       <div className="flex flex-col gap-6 w-full">
         <div className="flex flex-col items-start gap-3 small:gap-5 w-full">
-          <h2 className="font-semibold text-xl small:text-2xl text-center small:text-left w-full">School Type</h2>
-          <div className="flex flex-wrap items-center justify-center w-full gap-3">
+          <h2 className="font-semibold text-xl small:text-2xl text-center small:text-left w-full">
+            School Type
+          </h2>
+          <div className="flex flex-wrap small:flex-nowrap items-center justify-center small:justify-between w-full gap-3">
             <FilterOption
               text="Private 🔒"
               selectedOptions={selectedOptions}
@@ -52,8 +56,10 @@ const SchoolmatchFilters = ({ styles }: { styles?: string }) => {
         </div>
 
         <div className="flex flex-col items-start gap-3 small:gap-5 w-full">
-          <h2 className="font-semibold text-xl small:text-2xl text-center small:text-left w-full">Kid’s interests</h2>
-          <div className="flex flex-wrap items-center justify-center w-full gap-3">
+          <h2 className="font-semibold text-xl small:text-2xl text-center small:text-left w-full">
+            Kid’s interests
+          </h2>
+          <div className="flex flex-wrap small:flex-nowrap items-center justify-center small:justify-between w-full gap-3">
             <FilterOption
               text="Music 🎹"
               selectedOptions={selectedOptions}
@@ -71,7 +77,7 @@ const SchoolmatchFilters = ({ styles }: { styles?: string }) => {
             />
           </div>
 
-          <div className="flex flex-wrap items-center justify-center w-full gap-3">
+          <div className="flex flex-wrap small:flex-nowrap items-center justify-center small:justify-between w-full gap-3">
             <FilterOption
               text="Acting 🤡"
               selectedOptions={selectedOptions}
@@ -92,7 +98,10 @@ const SchoolmatchFilters = ({ styles }: { styles?: string }) => {
       </div>
 
       <div className="flex items-center justify-center font-semibold text-xl">
-        <SpecialSmallButton text="Start" css="px-10 small:px-16 py-1 text-sm small:text-base" />
+        <SpecialSmallButton
+          text="Start"
+          css="px-10 small:px-16 py-1 text-sm small:text-base"
+        />
       </div>
     </div>
   );

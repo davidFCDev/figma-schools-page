@@ -18,7 +18,7 @@ const Cost = ({ schools }: { schools: SchoolProps[] }) => {
             <div className="text-3xl">
               <PiCreditCard />
             </div>
-            <h3 className="text-lg font-semibold">Cost</h3>
+            <h3 className="text-base small:text-lg font-semibold">Cost</h3>
           </div>
           <Link href="#" className="text-pink bg-pinkPalid p-2 rounded-md flex items-center gap-1">
             <span>check out scholarships</span>

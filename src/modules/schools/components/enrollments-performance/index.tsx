@@ -11,7 +11,7 @@ const EnrollmentsPerformance = ({
   selectedSchool: SchoolProps;
 }) => {
   return (
-    <div className="w-full flex gap-5">
+    <div className="w-full flex flex-col small:flex-row gap-5">
       <div className="w-full flex flex-col gap-5">
         <Icsea selectedSchool={selectedSchool} />
 

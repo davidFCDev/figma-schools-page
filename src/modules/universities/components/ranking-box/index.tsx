@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const RankingBox = () => {
   return (
-    <div className="flex w-full bg-white rounded-3xl shadow relative border border-green">
+    <div className="flex w-full bg-white rounded-3xl shadow relative border border-green small:border-white">
       <img
         src="/green-line.png"
         alt="green line background"
@@ -28,7 +28,7 @@ const RankingBox = () => {
           </p>
           <Link
             href={"/dashboard/university/rankings"}
-            className="text-white bg-green flex items-center gap-2 px-5 small:px-10 py-2 small:py-3 rounded-full shadow hover:bg-green2"
+            className="text-white bg-green flex items-center gap-2 px-6 small:px-10 py-2 small:py-3 rounded-full shadow hover:bg-green2"
           >
             <span className="font-semibold text-sm small:text-lg">See rankings</span>
             <FaArrowRight />

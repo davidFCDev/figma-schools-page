@@ -17,7 +17,7 @@ const Facilities = ({ schools }: { schools: SchoolProps[] }) => {
           <div className="text-3xl">
             <PiBuildings />
           </div>
-          <h3 className="text-lg font-semibold">Facilities</h3>
+          <h3 className="text-base small:text-lg font-semibold">Facilities</h3>
         </div>
       </TableCell>
       {schools.slice(0, 2).map((school, index) => (

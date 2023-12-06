@@ -7,7 +7,7 @@ import ResourceCard from "../components/resource-card";
 
 const ResourcesTemplate = () => {
   return (
-    <main className={`${style.page} flex flex-col gap-10 `}>
+    <main className={`${style.page} flex flex-col gap-10 items-center`}>
       <GreenBox />
 
       <div className="flex flex-col items-center relative">
@@ -18,13 +18,13 @@ const ResourcesTemplate = () => {
         <img
           src="/green-line2.png"
           alt="green-line"
-          className="absolute -bottom-6 small:right-48 w-40 small:w-72"
+          className="absolute -bottom-6 -right-[5%] small:-right-[15%] w-40 small:w-72"
         />
       </div>
 
       <Categories />
 
-      <div className="flex flex-col small:flex-row justify-center pt-10 gap-8">
+      <div className="flex flex-col small:flex-row justify-center small:pt-10 gap-8">
         {resources.map((resource) => (
           <ResourceCard key={resource.id} resource={resource} />
         ))}

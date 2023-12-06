@@ -11,10 +11,9 @@ interface School {
   school: SchoolProps;
   onSelect: (schoolId: number) => void;
   selectedSchool: number | null;
-  icon: React.ReactNode;
 }
 
-const School: React.FC<School> = ({ school, onSelect, selectedSchool, icon }) => {
+const School: React.FC<School> = ({ school, onSelect, selectedSchool }) => {
   const [isArrowUp, setIsArrowUp] = useState(false);
 
   const handleSelect = () => {
@@ -27,23 +26,31 @@ const School: React.FC<School> = ({ school, onSelect, selectedSchool, icon }) =>
   }, [selectedSchool, school.id]);
 
   return (
-    <div className="flex justify-between items-center">
-      <div
-        className="flex gap-4 items-center hover:cursor-pointer"
-        onClick={() => onSelect(school.id)}
-      >
-        <span className="font-light">{school.id}</span>
-        <img src={school.logo} alt={school.name} className="w-14" />
-        <h3 className="max-w-[180px] text-base">{school.name}</h3>
+    <div className="flex flex-col gap-4 small:gap-0 small:flex-row justify-between items-center">
+      <div className="flex items-center justify-between w-full small:w-max">
+        <div
+          className="flex gap-2 small:gap-4 items-center justify-start w-full small:w-max hover:cursor-pointer"
+          onClick={() => onSelect(school.id)}
+        >
+          <span className="font-light hidden small:block">{school.id}</span>
+          <img src={school.logo} alt={school.name} className="w-14" />
+          <h3 className="small:max-w-[180px] text-lg small:text-xl">
+            {school.name}
+          </h3>
+        </div>
+        <div
+          onClick={handleSelect}
+          className="hover:cursor-pointer flex small:hidden"
+        >
+          {isArrowUp ? <SlArrowUp /> : <SlArrowDown />}
+        </div>
       </div>
 
-      <div className="flex gap-6 items-center text-base">
+      <div className="flex flex-col small:flex-row gap-6 items-center text-base">
         <BasicSchoolInfo school={school} />
 
-        <SpecialSmallButton icon={icon} css="p-1"/>
-
-        <div onClick={handleSelect} className="hover:cursor-pointer">
-          {isArrowUp ? <SlArrowUp /> : <SlArrowDown />}
+        <div className="hidden small:flex">
+          <SpecialSmallButton icon={<RiHeartLine />} css="p-1" />
         </div>
       </div>
     </div>

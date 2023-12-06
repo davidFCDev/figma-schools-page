@@ -23,7 +23,7 @@ const SchoolmatchTemplate = () => {
         <div className="relative">
           <img src="/map2.png" alt="map" className="w-full z-0" />
 
-          <div className="absolute bottom-5 right-5">
+          <div className="absolute bottom-4 right-4">
             <SpecialSmallButton
               text="Expand Map"
               css="px-10 small:px-16 py-1 text-sm small:text-base"
@@ -48,9 +48,11 @@ const SchoolmatchTemplate = () => {
             />
           </div>
           <img src="/map3.png" alt="map" className="w-full" />
-          {/* <div className="absolute z-20 left-12 top-36">
+
+          {/* Filters Expand Map */}
+          <div className="hidden small:block absolute z-20 left-12 top-36">
             <SchoolmatchFilters styles="shadow-2xl shadow-neutral-400" />
-          </div> */}
+          </div>
         </div>
       )}
     </main>

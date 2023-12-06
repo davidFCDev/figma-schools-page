@@ -16,7 +16,7 @@ const Financial = ({ schools }: { schools: SchoolProps[] }) => {
           <div className="text-3xl">
             <MdAttachMoney />
           </div>
-          <h3 className="text-lg font-semibold">
+          <h3 className="text-base small:text-lg font-semibold">
             Scholarships & Financial Aid
           </h3>
         </div>

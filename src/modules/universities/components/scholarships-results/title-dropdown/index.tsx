@@ -9,7 +9,7 @@ const TitleDropdown: React.FC<{ scholarship: UniversityScholarshipProps }> = ({
 }) => {
   return (
     <div className="w-full rounded-3xl border-t border-neutral-200 shadow-b-xs shadow-neutral-200 flex flex-col gap-4 px-0 small:px-8 pt-5">
-      <h2 className="text-xl font-bold">Scholarship info</h2>
+      <h2 className="text-xl font-bold text-center small:text-left">Scholarship info</h2>
       <div className="flex flex-col small:flex-row gap-3 small:gap-5 items-start">
         <div className="bg-white rounded-2xl py-4 flex flex-col gap-3 w-full">
           <div className="flex gap-2 items-center text-lg font-semibold px-4">

@@ -7,7 +7,7 @@ import StepOneForm from "../components/step-one-form";
 
 const StepOneTemplate = () => {
   return (
-    <div className="w-full font-outfit flex flex-col small:flex-row">
+    <div className="w-full min-h-screen font-outfit flex flex-col small:flex-row">
       <GreenAside img={"/star.png"} />
 
       <div className="p-6 small:p-12 w-full flex flex-col gap-10 items-center bg-gray">

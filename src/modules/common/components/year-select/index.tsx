@@ -15,7 +15,7 @@ export default function YearSelect() {
   const years = Array.from({ length: 5 }, (_, index) => 2018 + index);
 
   return (
-    <FormControl sx={{ m: 1, minWidth: 100, height:20 }} size="small">
+    <FormControl sx={{ m: 1, minWidth: 100 }} size="small">
       <InputLabel id="demo-select-small-label">{currentYear}</InputLabel>
       <Select
         labelId="demo-select-small-label"

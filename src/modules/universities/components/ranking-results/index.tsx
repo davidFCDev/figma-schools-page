@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import SpecialButton from "@/modules/common/components/special-button";
 import Link from "next/link";
 import React from "react";
 import { IoLocationOutline } from "react-icons/io5";
@@ -23,7 +22,7 @@ const RankingResults = () => {
             />
 
             <div className="flex flex-col gap-5 items-center small:items-start">
-              <div className="flex items-center gap-5 small:gap-0">
+              <div className="flex items-center justify-start gap-5 small:gap-0 w-full">
                 <img
                   src={item.logo}
                   alt={item.title}
@@ -65,7 +64,7 @@ const RankingResults = () => {
           <Link href={item.link} className="flex small:items-end justify-center small:justify-normal">
             <SpecialSmallButton
               text="Visit Website"
-              css="px-3 small:px-5 py-1 small:py-2"
+              css="px-6 small:px-5 py-1 small:py-2"
             />
           </Link>
         </div>

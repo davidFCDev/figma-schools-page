@@ -72,7 +72,7 @@ const TitleResults: React.FC<Scholarship> = ({
         <SpecialSmallButton
           text="Apply"
           icon={<PiHandPalmLight />}
-          css="small:px-4 small:py-2 px-2 py-1 text-sm small:text-base"
+          css="small:px-4 small:py-2 px-9 py-1 text-sm small:text-base"
         />
 
         <div

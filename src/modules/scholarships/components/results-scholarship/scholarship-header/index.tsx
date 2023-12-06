@@ -48,7 +48,7 @@ const ScholarshipHeader: React.FC<Scholarship> = ({
         </div>
       </div>
 
-      <div className="flex flex-wrap small:flex-nowrap gap-4 small:gap-6 items-center justify-center small:justify-normal">
+      <div className="flex flex-wrap small:flex-nowrap gap-5 small:gap-6 items-center justify-center small:justify-normal">
         <div className=" flex gap-3 items-center p-2 small:p-4 bg-white rounded-2xl small:rounded-3xl border border-neutral-200 shadow-xs shadow-neutral-200">
           <div className="text-xl small:text-2xl">
             <PiTrophy />
@@ -68,7 +68,7 @@ const ScholarshipHeader: React.FC<Scholarship> = ({
         <SpecialSmallButton
           text="Apply"
           icon={<PiHandPalmLight />}
-          css="px-4 py-1 small:py-2 text-sm small:text-base"
+          css="px-6 py-1 small:py-2 text-sm small:text-base"
         />
 
         <div

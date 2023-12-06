@@ -74,7 +74,7 @@ const Navbar = () => {
             <div className="absolute -right-4 top-5">
               <SpecialSmallButton
                 onClick={handleShow}
-                css="p-1"
+                css="p-1 text-xs"
                 icon={<RxCross2 />}
               />
             </div>
@@ -111,6 +111,7 @@ const Navbar = () => {
                 <Link
                   href={"/dashboard/schoolmatch"}
                   className="pl-3 small:pl-6"
+                  onClick={() => handleLinkClick("/dashboard/schoolmatch")}
                 >
                   <SpecialSmallButton
                     text="SchoolMatch"
