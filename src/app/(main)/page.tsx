@@ -1,4 +1,4 @@
-import RootTemplate from "@/modules/root/templates";
+import StepOneTemplate from "@/modules/register/templates/stepOne.template";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,5 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function Root() {
-  return <RootTemplate />;
+  return <StepOneTemplate />;
 }
